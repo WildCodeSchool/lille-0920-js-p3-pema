@@ -6,6 +6,8 @@ import slide_three from "../../assets/images/slide_three.jpg";
 import slide_four from "../../assets/images/slide_four.jpg";
 import slide_five from "../../assets/images/slide_five.jpg";
 import slide_six from "../../assets/images/slide_six.jpg";
+import '../../styled-components/header/styles.css'
+
 const Carrousel = () => {
   const settings = {
     dots: false,
@@ -18,7 +20,8 @@ const Carrousel = () => {
       className="carrousel_wrapper"
       style={{
         height: '500px',
-        overflow: "hidden"
+        overflow: "hidden",
+        
       }}
     >
       <Slider {...settings}>

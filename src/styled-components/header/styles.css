@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cuprum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lobster&display=swap");
+
+
 body {
   padding: 0;
   margin: 0;
@@ -8,18 +12,6 @@ body {
   font-family: "Righteous", cursive;
 }
 
-.bck_black {
-  background: #3c3c3c;
-}
-.bck_white {
-  background: #ffffff;
-}
-.bck_red {
-  background: #ff4800;
-}
-.bck_yellow {
-  background: #ffa800;
-}
 
 .iconImage {
   width: 20px;
@@ -31,39 +23,21 @@ body {
   margin: 0 auto;
 }
 
-/*  HEADER*/
-
-header {
-  padding: 10px 0px;
-  transition: all 300ms ease-in;
-}
-
-header .header_logo {
-  flex-grow: 1;
-}
-header .header_logo_venue {
-  font-size: 40px;
-  margin-left: 6vw;
-  text-shadow: 2px 2px #3c3c3c;
-  font-size: 45px;
-}
-
-header .header_logo_title {
-  margin-left: 10vw;
-  text-shadow: 2px 2px #3c3c3c;
-  font-size: 35px;
-}
 
     /* CARROUSEL */
 
 
 .carrousel_wrapper {
-  height: 700px;
+  height: 100px;
   overflow: hidden;
+  color: white;
 }
 
 .carrousel_image {
+  opacity: 0.6;
   background-size: cover !important;
+  background-blend-mode:difference;
+ 
 }
 
 .name {
@@ -72,7 +46,8 @@ header .header_logo_title {
   left: 50%;
   width: 500px;
   height: 260px;
-  font-family: Tahoma;
+  font-family:Cuprum;
+  font-weight: bold;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border: 2px solid white;
