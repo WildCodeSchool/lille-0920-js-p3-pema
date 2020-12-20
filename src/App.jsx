@@ -1,7 +1,11 @@
+import Header from "./Components/Header/Header";
+import { Reset } from "styled-reset";
+
 export default function App() {
   return (
     <div>
-      <h1>Hello World !</h1>
+      <Reset />
+      <Header />
     </div>
   );
 }
