@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cuprum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lobster&display=swap");
-
+:root {
+  --primary: #fff;
+}
 
 body {
   padding: 0;

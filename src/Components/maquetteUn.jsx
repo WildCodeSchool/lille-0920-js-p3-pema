@@ -5,7 +5,7 @@ import MaquetUn from "../assets/images/maquetUn.JPG";
 
   return (
     <div style={{ position: "relative" }}>
-   <img src= {MaquetUn} style={{ width: '100vw', height:'100vh'}} />
+   <img src= {MaquetUn} style={{ width: '95vw', height:'100vh'}} />
     </div>
   );
 };

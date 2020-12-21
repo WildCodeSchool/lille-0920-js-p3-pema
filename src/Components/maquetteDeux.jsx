@@ -5,7 +5,7 @@ import MaquetteDeux from "../assets/images/MaquetteDeux.JPG";
 
   return (
     <div style={{ position: "relative" }}>
-   <img src= {MaquetteDeux} style={{ width: '100vw', height:'150vh'}} />
+   <img src= {MaquetteDeux} style={{ width: '98vw', height:'150vh'}} />
     </div>
   );
 };

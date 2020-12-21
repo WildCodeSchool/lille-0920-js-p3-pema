@@ -1,10 +1,7 @@
-import {BrowserRouter as Router,Switch,Route}  from 'react-router-dom'
+import {BrowserRouter as Router}  from 'react-router-dom'
 import React, { Component } from "react";
-import "./AppStyles.css";
-import Header from "./Components/Header/Navbar";
-import Carousel from "./Components/carousel/index";
+import HeaderIndex from "./Components/Header/HeaderIndex";
 import Footer from './Components/Footer/Footer'
-import './AppStyles.css'
 import MaquetteUn from './Components/maquetteUn';
 import MaquetteDe from './Components/maquetteDeux';
 
@@ -14,12 +11,11 @@ class App extends Component {
       <div className="App">
       
       <Router> 
-        <Header />
-        <Carousel />
+        <HeaderIndex />
         <MaquetteDe />
         <MaquetteUn />
         <Footer/>
-        </Router>
+      </Router>
       </div>
     );
   }
