@@ -28,15 +28,15 @@ const Sidebar = () => {
             <i className="fal fa-times"></i>
           </CloseIcon>
           <Li onClick={showSidebar}>
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
             <Item>Accueil</Item>
           </Li>
           <Li onClick={showSidebar}>
-            <i class="fas fa-plane"></i>
+            <i className="fas fa-plane"></i>
             <Item>Un voyage inédit</Item>
           </Li>
           <Li onClick={showSidebar}>
-            <i class="fas fa-handshake-alt"></i>
+            <i className="fas fa-handshake-alt"></i>
             <Item>Nos partenaires et clients</Item>
           </Li>
         </Ul>

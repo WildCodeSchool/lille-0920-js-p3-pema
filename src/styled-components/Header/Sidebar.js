@@ -14,7 +14,7 @@ export const IconBars = styled.div`
 export const Nav = styled.nav`
   background-color: white;
   color: #505c62;
-  width: 20%;
+  width: 25%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ export const Nav = styled.nav`
   ${({ sidebar }) =>
     sidebar &&
     `
-  left: 80%;
+  left: 75%;
   transition: 350ms;
   `}
 `;
@@ -49,7 +49,7 @@ export const CloseIcon = styled.li`
 export const Li = styled.li`
   display: flex;
   justify-content: start;
-  align-items: center;
+  //align-items: center;
   width: 80%;
   text-align: center;
   height: 5%;
@@ -60,7 +60,13 @@ export const Li = styled.li`
   :hover {
     border-bottom: 1px solid #505c62;
     display: flex;
-    align-items: center;
+    //align-items: center;
+  }
+  @media screen and (max-width: 1192px) {
+    font-size: 14pt;
+  }
+  @media screen and (max-width: 1112px) {
+    font-size: 13pt;
   }
 `;
 
