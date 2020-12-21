@@ -7,7 +7,7 @@ import {
   Ul,
   CloseIcon,
   Li,
-} from "../../styled-components/Sidebar";
+} from "../../styled-components/Header/Sidebar";
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);

@@ -11,7 +11,7 @@ import {
   LogoContainer,
   H1,
   Logo,
-} from "../../styled-components/Header";
+} from "../../styled-components/Header/Header";
 const Header = () => {
   return (
     <Main>
