@@ -35,6 +35,7 @@ export const Ul = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #505c62;
 `;
 
 export const CloseIcon = styled.li`
@@ -47,18 +48,22 @@ export const CloseIcon = styled.li`
 
 export const Li = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 80%;
   text-align: center;
   height: 5%;
   margin-bottom: 1%;
-
+  font-size: 15pt;
+  margin-bottom: 10%;
   cursor: pointer;
   :hover {
-    color: #505c62;
     border-bottom: 1px solid #505c62;
     display: flex;
     align-items: center;
   }
+`;
+
+export const Item = styled.span`
+  margin-left: 5%;
 `;

@@ -7,6 +7,7 @@ import {
   Ul,
   CloseIcon,
   Li,
+  Item,
 } from "../../styled-components/Header/Sidebar";
 
 const Sidebar = () => {
@@ -26,9 +27,18 @@ const Sidebar = () => {
           <CloseIcon onClick={showSidebar}>
             <i className="fal fa-times"></i>
           </CloseIcon>
-          <Li>Accueil</Li>
-          <Li>Un voyage inédit</Li>
-          <Li>Nos partenaires et clients</Li>
+          <Li>
+            <i class="fas fa-home"></i>
+            <Item>Accueil</Item>
+          </Li>
+          <Li>
+            <i class="fas fa-plane"></i>
+            <Item>Un voyage inédit</Item>
+          </Li>
+          <Li>
+            <i class="fas fa-handshake-alt"></i>
+            <Item>Nos partenaires et clients</Item>
+          </Li>
         </Ul>
       </Nav>
     </Main>
