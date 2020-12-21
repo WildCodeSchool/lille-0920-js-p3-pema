@@ -18,18 +18,17 @@ export const Image = styled.img`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 70%;
-  padding: 2% 0%;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding-top: 5%;
   align-items: start;
-  width: 100%;
+  width: 70%;
 `;
 
 export const H1 = styled.h1`
@@ -42,13 +41,4 @@ export const H1 = styled.h1`
 
 export const Logo = styled.img`
   width: 30%;
-`;
-
-export const Nav = styled.nav`
-  width: 100%;
-`;
-
-export const Ul = styled.ul`
-  display: flex;
-  list-style: none;
 `;

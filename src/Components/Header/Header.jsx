@@ -1,3 +1,5 @@
+import Sidebar from "./Sidebar";
+
 import firstImage from "../../assets/images/Header/person.png";
 import logo from "../../assets/images/pemalogo.png";
 
@@ -6,11 +8,9 @@ import {
   ImageContainer,
   Image,
   Container,
-  Nav,
   LogoContainer,
   H1,
   Logo,
-  Ul,
 } from "../../styled-components/Header";
 const Header = () => {
   return (
@@ -19,17 +19,11 @@ const Header = () => {
         <Image src={firstImage} alt="ok" />
       </ImageContainer>
       <Container>
-        <Nav>
-          <Ul>
-            <li>First item</li>
-            <li>Second item</li>
-            <li>Third item</li>
-          </Ul>
-        </Nav>
         <LogoContainer>
-          <Logo src={logo} alt="logo pète samer" />
+          <Logo src={logo} alt="logo pema consulting" />
           <H1>Un voyage inédit au coeur de votre entreprise</H1>
         </LogoContainer>
+        <Sidebar />
       </Container>
     </Main>
   );
