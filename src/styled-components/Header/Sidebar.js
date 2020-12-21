@@ -9,6 +9,9 @@ export const IconBars = styled.div`
   font-size: 30pt;
   cursor: pointer;
   color: white;
+  @media screen and (max-width: 700px) {
+    font-size: 20pt;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -28,6 +31,24 @@ export const Nav = styled.nav`
   left: 75%;
   transition: 350ms;
   `}
+  @media screen and (max-width: 1100px) {
+    width: 50%;
+    ${({ sidebar }) =>
+      sidebar &&
+      `
+      left: 50%;
+      transition: 350ms;
+  `}
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    ${({ sidebar }) =>
+      sidebar &&
+      `
+      left: 0%;
+      transition: 350ms;
+  `}
+  }
 `;
 
 export const Ul = styled.ul`
@@ -49,7 +70,6 @@ export const CloseIcon = styled.li`
 export const Li = styled.li`
   display: flex;
   justify-content: start;
-  //align-items: center;
   width: 80%;
   text-align: center;
   height: 5%;
@@ -60,13 +80,6 @@ export const Li = styled.li`
   :hover {
     border-bottom: 1px solid #505c62;
     display: flex;
-    //align-items: center;
-  }
-  @media screen and (max-width: 1192px) {
-    font-size: 14pt;
-  }
-  @media screen and (max-width: 1112px) {
-    font-size: 13pt;
   }
 `;
 
