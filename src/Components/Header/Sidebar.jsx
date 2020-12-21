@@ -23,19 +23,19 @@ const Sidebar = () => {
         <i className="far fa-bars"></i>
       </IconBars>
       <Nav sidebar={sidebar}>
-        <Ul onClick={showSidebar}>
+        <Ul>
           <CloseIcon onClick={showSidebar}>
             <i className="fal fa-times"></i>
           </CloseIcon>
-          <Li>
+          <Li onClick={showSidebar}>
             <i class="fas fa-home"></i>
             <Item>Accueil</Item>
           </Li>
-          <Li>
+          <Li onClick={showSidebar}>
             <i class="fas fa-plane"></i>
             <Item>Un voyage inédit</Item>
           </Li>
-          <Li>
+          <Li onClick={showSidebar}>
             <i class="fas fa-handshake-alt"></i>
             <Item>Nos partenaires et clients</Item>
           </Li>
