@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cuprum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lobster&display=swap");
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.font_righteous {
+  font-family: "Righteous", cursive;
+}
+
+
+.iconImage {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.center_wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}

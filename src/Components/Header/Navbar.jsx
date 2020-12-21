@@ -7,7 +7,7 @@ import { FaAtlassian,FaTimes,FaAlignJustify } from 'react-icons/fa';
 import  Button from './Button';
 
 function Header(){
- 
+//Set the button to open and close the nav menu burger onclick on mobile devices
   const[click,setclick]=useState(false)
   const[button,setbutton]=useState(true)
   useEffect(()=>{
@@ -28,6 +28,7 @@ setbutton(true)
     }
   }
 window.addEventListener('resize',showbutton)
+//display the navbar
   return(
     <> 
     <div className='navbar'>
@@ -47,7 +48,7 @@ window.addEventListener('resize',showbutton)
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li className='nav-item'>
           <Link to='/' className='nav-link'onClick={closemobilemenu} >
-           C'est toto qui...
+          C'est l'histoire de...
 </Link>
 </li>
 <li className='nav-item'>

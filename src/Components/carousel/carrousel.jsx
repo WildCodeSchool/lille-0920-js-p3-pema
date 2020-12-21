@@ -6,9 +6,10 @@ import slide_three from "../../assets/images/slide_three.jpg";
 import slide_four from "../../assets/images/slide_four.jpg";
 import slide_five from "../../assets/images/slide_five.jpg";
 import slide_six from "../../assets/images/slide_six.jpg";
-import '../../styled-components/header/styles.css'
+import '../../styled-components/header/carrousel.css'
 
 const Carrousel = () => {
+  //Set carrousel settings 
   const settings = {
     dots: false,
     infinite: true,
@@ -19,7 +20,7 @@ const Carrousel = () => {
     <div
       className="carrousel_wrapper"
       style={{
-        height: '500px',
+        height: '695px',
         overflow: "hidden",
         
       }}
@@ -30,7 +31,7 @@ const Carrousel = () => {
             className="carrousel_image"
             style={{
               background: `url(${slide_one})`,
-              height:'500px'
+              height: `${window.innerHeight}px`
             }}
           />
         </div>

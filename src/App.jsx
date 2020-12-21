@@ -1,9 +1,12 @@
 import {BrowserRouter as Router,Switch,Route}  from 'react-router-dom'
 import React, { Component } from "react";
-import "./styled-components/header/styles.css";
+import "./AppStyles.css";
 import Header from "./Components/Header/Navbar";
 import Carousel from "./Components/carousel/index";
 import Footer from './Components/Footer/Footer'
+import './AppStyles.css'
+import MaquetteUn from './Components/maquetteUn';
+import MaquetteDe from './Components/maquetteDeux';
 
 class App extends Component {
   render() {
@@ -13,7 +16,9 @@ class App extends Component {
       <Router> 
         <Header />
         <Carousel />
-        <Footer></Footer>
+        <MaquetteDe />
+        <MaquetteUn />
+        <Footer/>
         </Router>
       </div>
     );
