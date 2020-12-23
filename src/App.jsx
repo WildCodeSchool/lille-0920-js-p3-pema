@@ -1,7 +1,9 @@
+import Timeline from "./Components/Timeline/Timeline";
+
 export default function App() {
   return (
-    <div>
-      <h1>Hello World !</h1>
-    </div>
+    <>
+      <Timeline />
+    </>
   );
 }
