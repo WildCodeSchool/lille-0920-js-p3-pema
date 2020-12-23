@@ -61,6 +61,8 @@ export const H1 = styled.h1`
   padding-top: 1%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: GT Walsheim;
+  font-weight: bold;
   @media screen and (max-width: 700px) {
     font-size: 13pt;
     -webkit-text-stroke-width: 0px;

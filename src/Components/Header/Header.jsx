@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar";
 
-import logo from "../../assets/images/pemalogo.png";
+import logo from "../../assets/images/logo.png";
 
 import {
   Main,

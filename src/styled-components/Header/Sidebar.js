@@ -30,6 +30,7 @@ export const Nav = styled.nav`
     `
   left: 75%;
   transition: 350ms;
+  
   `}
   @media screen and (max-width: 1100px) {
     width: 50%;
@@ -38,6 +39,7 @@ export const Nav = styled.nav`
       `
       left: 50%;
       transition: 350ms;
+      
   `}
   }
   @media screen and (max-width: 700px) {
@@ -84,5 +86,6 @@ export const Li = styled.li`
 `;
 
 export const Item = styled.span`
+  font-family: GT Walsheim;
   margin-left: 5%;
 `;
