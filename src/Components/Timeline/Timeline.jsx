@@ -3,8 +3,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import {
-  Div1,
   Main,
+  FirstContainer,
   Div,
   Line,
   LeftContainer,
@@ -23,9 +23,8 @@ const Timeline = () => {
   }, []);
 
   return (
-    <>
-      <Div1>Header</Div1>
-      <Main>
+    <Main>
+      <FirstContainer>
         <Line></Line>
         <Div>
           <RightContainer>
@@ -58,16 +57,13 @@ const Timeline = () => {
             </BlocItems>
           </RightContainer>
         </Div>
-      </Main>
+      </FirstContainer>
       <Container>
         <LastSpan data-aos="zoom-out-down">
           Nous leur offrons bien plus !
         </LastSpan>
       </Container>
-      <p>test</p>
-      <p>test</p>
-      <p>test</p>
-    </>
+    </Main>
   );
 };
 
