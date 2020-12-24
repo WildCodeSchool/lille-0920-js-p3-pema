@@ -1,33 +1,34 @@
 import styled from "styled-components";
 
-export const Div1 = styled.div`
-  border: 1px solid red;
+export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: 100vh;
 `;
 
-export const Main = styled.div`
+export const FirstContainer = styled.div`
   //border: 1px solid red;
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 120vh;
+  @media screen and (max-width: 700px) {
+    padding: 0;
+  }
 `;
 
 export const Line = styled.div`
   background-color: #505c62;
-  width: 0.5px;
+  width: 2px;
   position: relative;
   margin-left: 50%;
   margin-top: 10%;
   @media screen and (max-width: 700px) {
-    margin-left: 10%;
+    margin-left: 3%;
   }
   @media screen and (max-width: 500px) {
-    margin-left: 10%;
+    margin-left: 3%;
   }
 `;
 
@@ -35,9 +36,8 @@ export const Div = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  height: 120vh;
+  justify-content: center;
   position: relative;
   padding-top: 5%;
   @media screen and (max-width: 700px) {
@@ -46,11 +46,12 @@ export const Div = styled.div`
 `;
 
 export const RightContainer = styled.div`
-  left: -15%;
   position: relative;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: flex-end;
+  padding-top: 10%;
+  padding-bottom: 10%;
   @media screen and (max-width: 1100px) {
     left: 0;
     width: 80%;
@@ -65,6 +66,8 @@ export const LeftContainer = styled.div`
   position: relative;
   width: 80%;
   left: -100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   @media screen and (max-width: 700px) {
     left: -5%;
     width: 80%;
