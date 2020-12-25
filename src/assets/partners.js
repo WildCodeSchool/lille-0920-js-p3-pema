@@ -22,6 +22,7 @@ import clariant from "../assets/images/partners/clariant.png";
 
 export const myPartners = [
   {
+    id: 0,
     name: "MainLogo",
     logos: [
       { src: quaternaire, alt: "quaternaire" },
@@ -32,6 +33,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 1,
     name: "Pharmacie",
     logos: [
       { src: sophartex, alt: "sophartex" },
@@ -39,6 +41,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 2,
     name: "Construction",
     logos: [
       { src: legendre, alt: "legendre" },
@@ -47,6 +50,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 3,
     name: "IT",
     logos: [
       { src: csgroup, alt: "csgroup" },
@@ -54,6 +58,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 4,
     name: "Services",
     logos: [
       { src: dekra, alt: "dekra" },
@@ -63,6 +68,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 5,
     name: "Industries",
     logos: [
       { src: elvia, alt: "elvia" },
@@ -72,6 +78,7 @@ export const myPartners = [
     ],
   },
   {
+    id: 6,
     name: "Agro-alimentaire",
     logos: [{ src: elivia, alt: "elivia" }],
   },

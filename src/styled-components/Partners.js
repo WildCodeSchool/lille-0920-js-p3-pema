@@ -4,69 +4,75 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: GT Walsheim Pro;
 `;
 
 export const Title = styled.h2`
   font-size: 30pt;
+  font-weight: lighter;
   color: #001027;
+  @media screen and (max-width: 500px) {
+    font-size: 20pt;
+  }
 `;
 
 export const CategoryTitle = styled.span`
   font-size: 18pt;
+  padding: 5%;
+  padding-top: 10%;
   color: #001027;
+  @media screen and (max-width: 500px) {
+    font-size: 15pt;
+  }
 `;
 
-export const Bloc1 = styled.div`
+export const FirstBloc = styled.div`
   display: flex;
   justify-content: space-around;
   width: 80%;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
-export const Bloc2 = styled.div`
+export const BlocsContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  width: 50%;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
-export const BlocSize60 = styled.div`
+export const Blocs = styled.div`
   display: flex;
-  align-items: center;
-  width: 60%;
-  justify-content: space-around;
-  padding: 2%;
-  border-top: 2px solid rgba(0, 16, 39, 0.1);
-`;
-
-export const BlocSize70 = styled.div`
-  display: flex;
-  align-items: center;
-  width: 70%;
+  flex-direction: column;
   justify-content: space-between;
-  padding-top: 2%;
-  border-top: 2px solid rgba(0, 16, 39, 0.1);
+  width: 30%;
+  align-items: center;
+  @media screen and (max-width: 500px) {
+    width: 50%;
+  }
 `;
 
 export const BlocAgro = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 30%;
   align-items: center;
-  justify-content: space-around;
-  border-top: 2px solid rgba(0, 16, 39, 0.1);
+  @media screen and (max-width: 500px) {
+    width: 50%;
+  }
 `;
 
 export const Logo = styled.img`
-  width: 20%;
-`;
-
-export const LogoXpm = styled.img`
   width: 35%;
 `;
 
-export const Logo20 = styled.img`
-  width: 20%;
-`;
 export const Logo15 = styled.img`
   width: 15%;
+`;
+
+export const Logo25 = styled.img`
+  width: 25%;
+  margin: 3%;
 `;
