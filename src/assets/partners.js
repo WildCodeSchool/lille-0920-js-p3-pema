@@ -29,7 +29,7 @@ export const myPartners = [
       { src: dupont, alt: "dupont" },
       { src: schneider, alt: "schneider" },
       { src: imma, alt: "imma" },
-      { src: xpm, alt: "imma" },
+      { src: xpm, alt: "xpm" },
     ],
   },
   {

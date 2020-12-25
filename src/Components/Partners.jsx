@@ -1,4 +1,3 @@
-import React from "react";
 import { myPartners } from "../assets/partners";
 
 import {
@@ -15,7 +14,6 @@ import {
 } from "../styled-components/Partners";
 
 const Partners = () => {
-  //console.log(myPartners.filter(part => part.name === "MainLogo"));
   return (
     <Main>
       <Title>Nos partenaires et nos clients</Title>
@@ -24,8 +22,8 @@ const Partners = () => {
         .map(partner => {
           return (
             <FirstBloc key={partner.id}>
-              {partner.logos.map((logo, i) => {
-                return <Logo15 src={logo.src} alt={logo.alt} key={i} />;
+              {partner.logos.map(logo => {
+                return <Logo15 key={logo.alt} src={logo.src} alt={logo.alt} />;
               })}
             </FirstBloc>
           );
@@ -38,8 +36,8 @@ const Partners = () => {
               <Blocs key={partner.id}>
                 <CategoryTitle>{partner.name}</CategoryTitle>
 
-                {partner.logos.map((logo, i) => {
-                  return <Logo src={logo.src} alt={logo.alt} key={i} />;
+                {partner.logos.map(logo => {
+                  return <Logo key={logo.alt} src={logo.src} alt={logo.alt} />;
                 })}
               </Blocs>
             );
@@ -52,9 +50,10 @@ const Partners = () => {
             return (
               <Blocs key={partner.id}>
                 <CategoryTitle>{partner.name}</CategoryTitle>
-
-                {partner.logos.map((logo, i) => {
-                  return <Logo25 src={logo.src} alt={logo.alt} key={i} />;
+                {partner.logos.map(logo => {
+                  return (
+                    <Logo25 key={logo.alt} src={logo.src} alt={logo.alt} />
+                  );
                 })}
               </Blocs>
             );
@@ -65,8 +64,10 @@ const Partners = () => {
             return (
               <BlocAgro key={partner.id}>
                 <CategoryTitle>{partner.name}</CategoryTitle>
-                {partner.logos.map((logo, i) => {
-                  return <Logo25 src={logo.src} alt={logo.alt} key={i} />;
+                {partner.logos.map(logo => {
+                  return (
+                    <Logo25 key={logo.alt} src={logo.src} alt={logo.alt} />
+                  );
                 })}
               </BlocAgro>
             );
