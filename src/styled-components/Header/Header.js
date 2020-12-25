@@ -46,7 +46,6 @@ export const Container = styled.div`
 
 export const LogoPema = styled.img`
   width: 20%;
-  border: 2px solid white;
   padding: 5%;
   @media screen and (max-width: 1100px) {
     width: 30%;
