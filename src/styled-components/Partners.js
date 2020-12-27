@@ -17,22 +17,13 @@ export const Title = styled.h2`
 `;
 
 export const CategoryTitle = styled.span`
+  display: ${({ id }) => (id === 0 ? "none" : "flex")};
   font-size: 18pt;
   padding: 5%;
   padding-top: 10%;
   color: #001027;
   @media screen and (max-width: 500px) {
     font-size: 15pt;
-  }
-`;
-
-export const FirstBloc = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  align-items: center;
-  @media screen and (max-width: 500px) {
-    width: 100%;
   }
 `;
 
@@ -44,35 +35,21 @@ export const BlocsContainer = styled.div`
 
 export const Blocs = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
+  flex-direction: ${props => (props.id === 0 ? "row" : "column")};
+  justify-content: ${props =>
+    props.id === 6 || props.id === 3 ? "flex-start" : "space-between"};
+  width: ${props => (props.id === 0 ? "80%" : "30%")};
   align-items: center;
   @media screen and (max-width: 500px) {
-    width: 50%;
-  }
-`;
-
-export const BlocAgro = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 30%;
-  align-items: center;
-  @media screen and (max-width: 500px) {
-    width: 50%;
+    width: ${props => (props.id === 0 ? "100%" : "50%")};
   }
 `;
 
 export const Logo = styled.img`
-  width: 35%;
-`;
-
-export const Logo15 = styled.img`
-  width: 15%;
-`;
-
-export const Logo25 = styled.img`
-  width: 25%;
-  margin: 3%;
+  width: ${({ id }) =>
+    (id > 0 && id < 4 && "35%") ||
+    (id > 3 && id < 7 && "25%") ||
+    (id === 0 && "15%")};
+  margin: ${props => (props.id > 0 && props.id < 4 ? "0" : "3%")};
+  margin-top: ${({ id }) => (id === 3 ? "5%" : "0")};
 `;
