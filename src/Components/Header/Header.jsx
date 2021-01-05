@@ -1,7 +1,7 @@
+import React, { useState } from "react";
+
 import Sidebar from "./Sidebar";
-
 import logo from "../../assets/images/logo.png";
-
 import {
   Main,
   HeaderBar,
@@ -10,12 +10,14 @@ import {
   Logo,
   LogoPema,
 } from "../../styled-components/Header/Header";
+
 const Header = () => {
+  const [sidebar, setSidebar] = useState(false);
   return (
-    <Main>
+    <Main sidebar={sidebar}>
       <HeaderBar>
         <Logo src={logo} alt="logo pema consulting" />
-        <Sidebar />
+        <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       </HeaderBar>
       <Container>
         <LogoPema src={logo} alt="logo pema consulting" />

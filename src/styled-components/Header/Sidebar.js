@@ -28,9 +28,8 @@ export const Nav = styled.nav`
   ${({ sidebar }) =>
     sidebar &&
     `
-  left: 75%;
-  transition: 350ms;
-  
+    left: 75%;
+    transition: 350ms;
   `}
   @media screen and (max-width: 1100px) {
     width: 50%;
@@ -71,6 +70,7 @@ export const CloseIcon = styled.li`
 
 export const Li = styled.li`
   display: flex;
+  overflow-y: hidden;
   justify-content: start;
   width: 80%;
   text-align: center;

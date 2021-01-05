@@ -5,17 +5,21 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  ${({ sidebar }) =>
+    sidebar &&
+    `
+    height: 100vh;
+    overflow-y: hidden;
+  `}
 `;
 
 export const HeaderBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 8vh;
   width: 100%;
-  background-color: rgba(80, 92, 98, 0.7);
-  z-index: 1;
-  top: 0;
-  position: fixed;
+  background-color: rgb(80, 92, 98);
 `;
 
 export const Logo = styled.img`
@@ -34,11 +38,12 @@ export const Container = styled.div`
   background-image: url(${Trip});
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 700px) {
     height: 50vh;
   }
@@ -55,11 +60,6 @@ export const LogoPema = styled.img`
 export const H1 = styled.h1`
   font-size: 25pt;
   color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
-  padding-top: 1%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-family: GT Walsheim;
   font-weight: bold;
   @media screen and (max-width: 700px) {

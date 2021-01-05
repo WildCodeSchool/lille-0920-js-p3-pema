@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import {
   Main,
   IconBars,
@@ -10,9 +8,7 @@ import {
   Item,
 } from "../../styled-components/Header/Sidebar";
 
-const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false);
-
+const Sidebar = ({ sidebar, setSidebar }) => {
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
