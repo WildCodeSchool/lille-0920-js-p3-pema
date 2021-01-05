@@ -18,6 +18,7 @@ export const HeaderBar = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 8vh;
+
   width: 100%;
   background-color: rgb(80, 92, 98);
 `;
