@@ -6,7 +6,7 @@ import {
   Main,
   HeaderBar,
   Container,
-  H1,
+  Title,
   Logo,
   LogoPema,
 } from "../../styled-components/Header/Header";
@@ -21,7 +21,7 @@ const Header = () => {
       </HeaderBar>
       <Container>
         <LogoPema src={logo} alt="logo pema consulting" />
-        <H1>Un voyage inédit au coeur de votre entreprise</H1>
+        <Title>Un voyage inédit au coeur de votre entreprise</Title>
       </Container>
     </Main>
   );

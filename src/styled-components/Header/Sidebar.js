@@ -52,7 +52,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Ul = styled.ul`
+export const Menu = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ export const CloseIcon = styled.li`
   cursor: pointer;
 `;
 
-export const Li = styled.li`
+export const SectionsNav = styled.li`
   display: flex;
   overflow-y: hidden;
   justify-content: start;

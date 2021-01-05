@@ -2,9 +2,9 @@ import {
   Main,
   IconBars,
   Nav,
-  Ul,
+  Menu,
   CloseIcon,
-  Li,
+  SectionsNav,
   Item,
 } from "../../styled-components/Header/Sidebar";
 
@@ -19,23 +19,23 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         <i className="far fa-bars"></i>
       </IconBars>
       <Nav sidebar={sidebar}>
-        <Ul>
+        <Menu>
           <CloseIcon onClick={showSidebar}>
             <i className="fal fa-times"></i>
           </CloseIcon>
-          <Li onClick={showSidebar}>
+          <SectionsNav onClick={showSidebar}>
             <i className="fas fa-home"></i>
             <Item>Accueil</Item>
-          </Li>
-          <Li onClick={showSidebar}>
+          </SectionsNav>
+          <SectionsNav onClick={showSidebar}>
             <i className="fas fa-plane"></i>
             <Item>Un voyage inédit</Item>
-          </Li>
-          <Li onClick={showSidebar}>
+          </SectionsNav>
+          <SectionsNav onClick={showSidebar}>
             <i className="fas fa-handshake-alt"></i>
             <Item>Nos partenaires et clients</Item>
-          </Li>
-        </Ul>
+          </SectionsNav>
+        </Menu>
       </Nav>
     </Main>
   );

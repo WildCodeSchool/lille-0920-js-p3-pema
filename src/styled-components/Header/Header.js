@@ -18,7 +18,6 @@ export const HeaderBar = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-
   width: 100%;
   background-color: rgb(80, 92, 98);
 `;
@@ -58,7 +57,7 @@ export const LogoPema = styled.img`
   }
 `;
 
-export const H1 = styled.h1`
+export const Title = styled.h1`
   font-size: 25pt;
   color: white;
   font-family: GT Walsheim;
@@ -68,3 +67,6 @@ export const H1 = styled.h1`
     -webkit-text-stroke-width: 0px;
   }
 `;
+
+
+
