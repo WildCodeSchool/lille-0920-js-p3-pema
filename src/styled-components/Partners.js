@@ -35,13 +35,13 @@ export const BlocsContainer = styled.div`
 
 export const Blocs = styled.div`
   display: flex;
-  flex-direction: ${props => (props.id === 0 ? "row" : "column")};
-  justify-content: ${props =>
-    props.id === 6 || props.id === 3 ? "flex-start" : "space-between"};
-  width: ${props => (props.id === 0 ? "80%" : "30%")};
+  flex-direction: ${({ id }) => (id === 0 ? "row" : "column")};
+  justify-content: ${({ id }) =>
+    id === 6 || id === 3 ? "flex-start" : "space-between"};
+  width: ${({ id }) => (id === 0 ? "80%" : "30%")};
   align-items: center;
   @media screen and (max-width: 500px) {
-    width: ${props => (props.id === 0 ? "100%" : "50%")};
+    width: ${({ id }) => (id === 0 ? "100%" : "50%")};
   }
 `;
 
@@ -50,6 +50,6 @@ export const Logo = styled.img`
     (id > 0 && id < 4 && "35%") ||
     (id > 3 && id < 7 && "25%") ||
     (id === 0 && "15%")};
-  margin: ${props => (props.id > 0 && props.id < 4 ? "0" : "3%")};
+  margin: ${({ id }) => (id > 0 && id < 4 ? "0" : "3%")};
   margin-top: ${({ id }) => (id === 3 ? "5%" : "0")};
 `;
