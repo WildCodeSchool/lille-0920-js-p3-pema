@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import "./assets/fonts/GTWalsheimPro-Thin/style.css";
+
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
