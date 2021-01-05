@@ -67,6 +67,3 @@ export const Title = styled.h1`
     -webkit-text-stroke-width: 0px;
   }
 `;
-
-
-
