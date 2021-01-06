@@ -6,6 +6,7 @@ import { myBlocs } from "../../assets/timeline";
 import {
   Main,
   TimelineContainer,
+  Bloc,
   Line,
   BlocContainer,
   BlocItems,
@@ -23,13 +24,15 @@ const Timeline = () => {
   return (
     <Main>
       <TimelineContainer>
-        <Line></Line>
         <BlocContainer>
           {myBlocs.map(bloc => (
-            <BlocItems data-aos="zoom-out-down" key={bloc.id} id={bloc.id}>
-              <Title id={bloc.id}>{bloc.title}</Title>
-              <Paragraph>{bloc.text}</Paragraph>
-            </BlocItems>
+            <Bloc key={bloc.id}>
+              <BlocItems data-aos="zoom-out-down" id={bloc.id}>
+                <Title id={bloc.id}>{bloc.title}</Title>
+                <Paragraph>{bloc.text}</Paragraph>
+              </BlocItems>
+              <Line data-aos="zoom-out-down"></Line>
+            </Bloc>
           ))}
         </BlocContainer>
       </TimelineContainer>
