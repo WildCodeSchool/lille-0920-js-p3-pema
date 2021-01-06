@@ -14,11 +14,11 @@ const Partners = () => {
     <Main>
       <Title>Nos partenaires et nos clients</Title>
       <BlocsContainer>
-        {myPartners.map(partner => {
+        {myPartners.map((partner) => {
           return (
             <Blocs key={partner.id} id={partner.id}>
               <CategoryTitle id={partner.id}>{partner.name}</CategoryTitle>
-              {partner.logos.map(logo => {
+              {partner.logos.map((logo) => {
                 return (
                   <Logo
                     key={logo.alt}
