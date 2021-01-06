@@ -6,10 +6,10 @@ export const Main = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  font-family: GT Walsheim;
 `;
 
-export const FirstContainer = styled.div`
-  //border: 1px solid red;
+export const TimelineContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -27,12 +27,9 @@ export const Line = styled.div`
   @media screen and (max-width: 700px) {
     margin-left: 3%;
   }
-  @media screen and (max-width: 500px) {
-    margin-left: 3%;
-  }
 `;
 
-export const Div = styled.div`
+export const BlocContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,71 +42,43 @@ export const Div = styled.div`
   }
 `;
 
-export const RightContainer = styled.div`
-  position: relative;
-  width: 70%;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  @media screen and (max-width: 1100px) {
-    left: 0;
-    width: 80%;
-  }
-  @media screen and (max-width: 700px) {
-    left: -5%;
-    width: 80%;
-  }
-`;
-
-export const LeftContainer = styled.div`
-  position: relative;
-  width: 80%;
-  left: -100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  @media screen and (max-width: 700px) {
-    left: -5%;
-    width: 80%;
-  }
-`;
-
 export const BlocItems = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: white;
   color: black;
   text-align: center;
-  width: 100%;
+
+  position: relative;
+  width: 80%;
+  left: ${({ id }) => id === 1 && `-100%`};
+  padding-top: 10%;
+  padding-bottom: 10%;
+  @media screen and (max-width: 1100px) {
+    ${({ id }) =>
+      id !== 2 &&
+      `
+      left: 0;
+      width: 80%;
+      `};
+  }
   @media screen and (max-width: 700px) {
-    width: 100%;
+    left: -5%;
+    width: 80%;
     text-align: left;
   }
 `;
 
-export const SpanFirst = styled.span`
-  font-family: GT Walsheim;
+export const Title = styled.span`
   font-size: 20pt;
   color: #505c62;
-  margin-top: 5%;
+  margin-top: ${({ id }) => id === 0 && `5%`};
   @media screen and (max-width: 500px) {
     font-size: 18pt;
   }
 `;
 
-export const Span = styled.span`
-  font-family: GT Walsheim;
-  font-size: 20pt;
-  color: #505c62;
-  @media screen and (max-width: 500px) {
-    font-size: 18pt;
-  }
-`;
-
-export const P = styled.p`
-  font-family: GT Walsheim;
+export const Paragraph = styled.p`
   font-size: 15pt;
   line-height: 2rem;
   @media screen and (max-width: 500px) {
@@ -117,17 +86,16 @@ export const P = styled.p`
   }
 `;
 
-export const LastSpan = styled.span`
-  font-family: GT Walsheim;
+export const LastContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+`;
+
+export const LastSentence = styled.span`
   font-size: 25pt;
   color: #505c62;
   @media screen and (max-width: 500px) {
     font-size: 19pt;
   }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 5%;
 `;
