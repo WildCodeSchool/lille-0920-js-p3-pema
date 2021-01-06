@@ -1,7 +1,9 @@
+import Chapters from "./components/chapters";
+
 export default function App() {
   return (
-    <div>
-      Hello World
-    </div>
+    <>
+      <Chapters />
+    </>
   );
 }
