@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import {
-  Container,
+  TabContainer,
   ChapterContainer,
   Chapter,
   BackgroundImageChapter,
   Modal,
-  ModalAndChapterContainer,
-  TabPage
+  TabPage,
 } from "../styled-components/ChaptersStyled";
 
 function Chapters() {
@@ -18,28 +17,22 @@ function Chapters() {
 
   return (
     <TabPage>
-      <Container>
-        <ModalAndChapterContainer>
-          <ChapterContainer onClick={() => setOpenModal("id1")}>
-            <BackgroundImageChapter src="https://via.placeholder.com/300" />
-            <Chapter>Chapitre 1</Chapter>
-          </ChapterContainer>
-        </ModalAndChapterContainer>
+      <TabContainer>
+        <ChapterContainer onClick={() => setOpenModal("id1")}>
+          <BackgroundImageChapter src="https://via.placeholder.com/300" />
+          <Chapter>Chapitre 1</Chapter>
+        </ChapterContainer>
 
-        <ModalAndChapterContainer>
-          <ChapterContainer onClick={() => setOpenModal("id2")}>
-            <BackgroundImageChapter src="https://via.placeholder.com/300" />
-            <Chapter>Chapitre 2</Chapter>
-          </ChapterContainer>
-        </ModalAndChapterContainer>
+        <ChapterContainer onClick={() => setOpenModal("id2")}>
+          <BackgroundImageChapter src="https://via.placeholder.com/300" />
+          <Chapter>Chapitre 2</Chapter>
+        </ChapterContainer>
 
-        <ModalAndChapterContainer>
-          <ChapterContainer onClick={() => setOpenModal("id3")}>
-            <BackgroundImageChapter src="https://via.placeholder.com/300" />
-            <Chapter>Chapitre 3</Chapter>
-          </ChapterContainer>
-        </ModalAndChapterContainer>
-      </Container>
+        <ChapterContainer onClick={() => setOpenModal("id3")}>
+          <BackgroundImageChapter src="https://via.placeholder.com/300" />
+          <Chapter>Chapitre 3</Chapter>
+        </ChapterContainer>
+      </TabContainer>
       <Modal className={openModal === "id1" ? "visible" : "hidden"}>
         Chapitre 1 : Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Recusandae sint nihil sunt error consectetur neque saepe dolorum

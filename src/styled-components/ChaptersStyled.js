@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const TabContainer = styled.div`
   display: flex;
   justify-content: space-around;
 `;
@@ -28,11 +28,6 @@ export const Modal = styled.div`
 &.hidden {
   display: none;
 }
-`;
-
-export const ModalAndChapterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export const TabPage = styled.div`
