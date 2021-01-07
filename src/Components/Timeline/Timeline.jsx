@@ -11,6 +11,7 @@ import {
   BlocItems,
   Title,
   Paragraph,
+  Bloc,
   LastContainer,
   LastSentence,
 } from "../../styled-components/Timeline";
@@ -31,7 +32,7 @@ const Timeline = () => {
                 <Title id={bloc.id}>{bloc.title}</Title>
                 <Paragraph>{bloc.text}</Paragraph>
               </BlocItems>
-              <Line data-aos="zoom-out-down"></Line>
+              <Line></Line>
             </Bloc>
           ))}
         </BlocContainer>

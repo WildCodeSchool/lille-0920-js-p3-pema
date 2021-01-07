@@ -18,6 +18,14 @@ export const TimelineContainer = styled.div`
   }
 `;
 
+export const Bloc = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Line = styled.div`
   background-color: #505c62;
   width: 2px;
@@ -48,13 +56,14 @@ export const BlocItems = styled.div`
   background-color: white;
   color: black;
   text-align: center;
-
   position: relative;
   width: 80%;
+  height: 10vh;
   left: ${({ id }) => id === 1 && `-100%`};
   padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 3%;
   @media screen and (max-width: 1100px) {
+    height: auto;
     ${({ id }) =>
       id !== 2 &&
       `
@@ -90,6 +99,7 @@ export const LastContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 5%;
+  margin-bottom: 5%;
 `;
 
 export const LastSentence = styled.span`
