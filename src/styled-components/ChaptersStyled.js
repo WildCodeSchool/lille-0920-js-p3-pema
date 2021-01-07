@@ -13,25 +13,29 @@ export const ChapterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 `;
 
 export const BackgroundImageChapter = styled.img`
   position: relative;
   border: 1px solid red;
-
-  ${({ openModal }) =>
-    openModal &&
-    `
-  visibility: hidden;
-  `}
 `;
 
 export const Modal = styled.div`
   width: 100%;
   height: 30vh;
+  margin: 2vh;
+&.hidden {
+  display: none;
+}
 `;
 
 export const ModalAndChapterContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TabPage = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
