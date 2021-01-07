@@ -28,9 +28,11 @@ const Timeline = () => {
         <BlocContainer>
           {myBlocs.map(bloc => (
             <Bloc key={bloc.id}>
-              <BlocItems data-aos="zoom-out-down" key={bloc.id} id={bloc.id}>
-                <Title id={bloc.id}>{bloc.title}</Title>
-                <Paragraph>{bloc.text}</Paragraph>
+              <BlocItems key={bloc.id} id={bloc.id}>
+                <Title data-aos="zoom-out-down" id={bloc.id}>
+                  {bloc.title}
+                </Title>
+                <Paragraph data-aos="zoom-out-down">{bloc.text}</Paragraph>
               </BlocItems>
               <Line></Line>
             </Bloc>

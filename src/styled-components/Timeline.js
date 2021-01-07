@@ -38,7 +38,7 @@ export const Line = styled.div`
 `;
 
 export const BlocContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
