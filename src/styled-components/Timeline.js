@@ -17,29 +17,29 @@ export const TimelineContainer = styled.div`
     padding: 0;
   }
 `;
-export const Bloc = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 
 export const Line = styled.div`
-  position: relative;
-  width: 2px;
-  height: 10rem;
   background-color: #505c62;
+  width: 2px;
+  position: relative;
+  margin-left: 50%;
   margin-top: 10%;
   @media screen and (max-width: 700px) {
-    height: 5rem;
+    margin-left: 3%;
   }
 `;
 
 export const BlocContainer = styled.div`
-  width: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   padding-top: 5%;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const BlocItems = styled.div`
@@ -48,9 +48,25 @@ export const BlocItems = styled.div`
   background-color: white;
   color: black;
   text-align: center;
+
   position: relative;
   width: 80%;
+  left: ${({ id }) => id === 1 && `-100%`};
   padding-top: 10%;
+  padding-bottom: 10%;
+  @media screen and (max-width: 1100px) {
+    ${({ id }) =>
+      id !== 2 &&
+      `
+      left: 0;
+      width: 80%;
+      `};
+  }
+  @media screen and (max-width: 700px) {
+    left: -5%;
+    width: 80%;
+    text-align: left;
+  }
 `;
 
 export const Title = styled.span`
@@ -58,7 +74,7 @@ export const Title = styled.span`
   color: #505c62;
   margin-top: ${({ id }) => id === 0 && `5%`};
   @media screen and (max-width: 500px) {
-    font-size: 15pt;
+    font-size: 18pt;
   }
 `;
 
