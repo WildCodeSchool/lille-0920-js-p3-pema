@@ -65,7 +65,7 @@ export const BlocItems = styled.div`
   @media screen and (max-width: 1100px) {
     height: auto;
     ${({ id }) =>
-      id !== 2 &&
+      id !== 1 &&
       `
       left: 0;
       width: 80%;
