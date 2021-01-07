@@ -55,12 +55,17 @@ export const TabContainer = styled.div`
 
 export const Chapter = styled.h1`
   position: absolute;
+  width: 300px;
+  color: white;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 1.5px 0 black;
 `;
 
 export const ChapterContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 `;
 
@@ -69,27 +74,22 @@ export const BackgroundImageChapter = styled.img`
   position: relative;
   padding: 1em;
   border-radius: 10px;
-  &:hover {
-    &.borderBlue {
-      animation: ${easeColorBorder} 0.15s ease-in;
-      background: linear-gradient(180deg, #244780, white);
-    }
-    &.borderBlack {
-      animation: ${easeColorBorder} 0.15s ease-in;
-      background: linear-gradient(180deg, black, white);
-    }
-    &.borderRed {
-      animation: ${easeColorBorder} 0.15s ease-in;
-      background: linear-gradient(180deg, #b60022, white);
-    }
+  &.borderBlue {
+    animation: ${easeColorBorder} 0.15s ease-in;
+    background: linear-gradient(180deg, #244780, white);
+  }
+  &.borderBlack {
+    animation: ${easeColorBorder} 0.15s ease-in;
+    background: linear-gradient(180deg, black, white);
+  }
+  &.borderRed {
+    animation: ${easeColorBorder} 0.15s ease-in;
+    background: linear-gradient(180deg, #b60022, white);
   }
 `;
 
 export const Modal = styled.div`
-  width: inherit;
   height: auto;
-  height: 30vh;
-  margin: 4vw 3vw;
   background: white;
   padding: 2em;
   margin: 1em;
@@ -102,24 +102,38 @@ export const BackgroundModal = styled.div`
   &.borderBlue {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+    margin-top: -2.5vh;
     background: linear-gradient(170deg, white 5%, #244780 60%);
     border-radius: 10px;
   }
   &.borderBlack {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+    margin-top: -2.5vh;
     background: linear-gradient(180deg, white 5%, black 60%);
     border-radius: 10px;
   }
   &.borderRed {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+    margin-top: -2.5vh;
     background: linear-gradient(190deg, white 12%, #b60022 60%);
     border-radius: 10px;
   }
 `;
 
+export const Title = styled.h1`
+  font-size: 1.5em;
+  color: black;
+`;
+
+export const SchemaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const TabPage = styled.div`
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, white, black);
 `;
