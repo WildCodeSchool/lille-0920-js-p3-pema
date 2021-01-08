@@ -28,7 +28,7 @@ export const Bloc = styled.div`
 
 export const Line = styled.div`
   background-color: #505c62;
-  width: 2px;
+  width: 2.5px;
   position: relative;
   margin-left: 50%;
   margin-top: 10%;
