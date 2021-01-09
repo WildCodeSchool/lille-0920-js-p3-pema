@@ -18,42 +18,42 @@ import schema1 from "../assets/pictures/schema1_chapter_1.png";
 import schema2 from "../assets/pictures/schema2_chapitre_2.png";
 
 function Chapters() {
-  const [openModal, setOpenModal] = useState({
-    modal1: "id1",
-    modal2: "id2",
-    modal3: "id3",
-  });
+  const [openModal, setOpenModal] = useState([
+    { modal1: "id1", isActive: false },
+    { modal2: "id2", isActive: false },
+    { modal3: "id3", isActive: false },
+  ]);
 
   return (
-    <BackgroundColor>
+    <BackgroundColor className={openModal.isActive === true ? "grow" : ""}>
       <TabPage>
         <TabContainer>
-          <ChapterContainer onClick={() => setOpenModal("id1")}>
+          <ChapterContainer onClick={() => setOpenModal({modal1:"id1", isActive: true})}>
             <BackgroundImageChapter
-              className={openModal === "id1" ? "borderBlue" : ""}
+              className={openModal.modal1 === "id1" ? "borderBlue" : ""}
               src={tabl1}
             />
             <Chapter>Un voyage inédit au coeur de votre entreprise</Chapter>
           </ChapterContainer>
 
-          <ChapterContainer onClick={() => setOpenModal("id2")}>
+          <ChapterContainer onClick={() => setOpenModal({modal2:"id2", isActive: true})}>
             <BackgroundImageChapter
-              className={openModal === "id2" ? "borderGold" : ""}
+              className={openModal.modal2 === "id2" ? "borderGold" : ""}
               src={tabl2}
             />
             <Chapter>Carnet de voyage pratique</Chapter>
           </ChapterContainer>
 
-          <ChapterContainer onClick={() => setOpenModal("id3")}>
+          <ChapterContainer onClick={() => setOpenModal({modal3:"id3", isActive: true})}>
             <BackgroundImageChapter
-              className={openModal === "id3" ? "borderRed" : ""}
+              className={openModal.modal3 === "id3" ? "borderRed" : ""}
               src={tabl3}
             />
             <Chapter>Témoignages</Chapter>
           </ChapterContainer>
         </TabContainer>
-        <BackgroundModal className={openModal === "id1" ? "borderBlue" : ""}>
-          <Modal className={openModal === "id1" ? "visible" : "hidden"}>
+        <BackgroundModal className={openModal.modal1 === "id1" ? "borderBlue" : ""}>
+          <Modal className={openModal.modal1 === "id1" ? "visible" : "hidden"}>
             <Title>
               Chapitre 1 : Un voyage inédit au coeur de votre entreprise
             </Title>
@@ -95,8 +95,8 @@ function Chapters() {
           </Modal>
         </BackgroundModal>
 
-        <BackgroundModal className={openModal === "id2" ? "borderGold" : ""}>
-          <Modal className={openModal === "id2" ? "visible" : "hidden"}>
+        <BackgroundModal className={openModal.modal2 === "id2" ? "borderGold" : ""}>
+          <Modal className={openModal.modal2 === "id2" ? "visible" : "hidden"}>
             <Title>Chapitre 2 : Carnet de voyage</Title>
             Que dire ?
             <br />
@@ -144,8 +144,8 @@ function Chapters() {
           </Modal>
         </BackgroundModal>
 
-        <BackgroundModal className={openModal === "id3" ? "borderRed" : ""}>
-          <Modal className={openModal === "id3" ? "visible" : "hidden"}>
+        <BackgroundModal className={openModal.modal3 === "id3" ? "borderRed" : ""}>
+          <Modal className={openModal.modal3 === "id3" ? "visible" : "hidden"}>
             <Title>Chapitre 3 : Souvenir du voyage</Title>
             Quelques exemples valent mieux qu'un long discours, n'est-ce pas ?
             <br />
@@ -154,6 +154,7 @@ function Chapters() {
               <img
                 id="carrousel"
                 src="https://via.placeholder.com/1150x500?text=Place+carrousel+here"
+                alt="carrousel"
               />
             </SchemaContainer>
           </Modal>
