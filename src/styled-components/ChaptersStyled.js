@@ -109,5 +109,12 @@ export const TabPage = styled.div`
 `;
 
 export const BackgroundColor = styled.div`
+  display: flex;
+  align-items: center;
   background: linear-gradient(180deg, white, black);
+  height: 100vh;
+  &.grow {
+    height: max-content;
+    padding-bottom: 5vh;
+  }
 `;
