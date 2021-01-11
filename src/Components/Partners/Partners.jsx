@@ -18,12 +18,12 @@ const Partners = () => {
     <Main className="slide-container">
       <Title>Nos partenaires et nos clients</Title>
       <Slide autoplay>
-        {myPartners.map(partner => {
+        {myPartners.map((partner) => {
           return (
             <Blocs key={partner.id} id={partner.id}>
               <CategoryTitle id={partner.id}>{partner.name}</CategoryTitle>
               <Logos>
-                {partner.logos.map(logo => {
+                {partner.logos.map((logo) => {
                   return (
                     <Logo
                       key={logo.alt}
