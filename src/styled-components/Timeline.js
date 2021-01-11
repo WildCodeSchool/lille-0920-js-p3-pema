@@ -6,7 +6,6 @@ export const Main = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  font-family: GT Walsheim;
 `;
 
 export const TimelineContainer = styled.div`
