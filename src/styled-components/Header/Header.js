@@ -19,7 +19,7 @@ export const HeaderBar = styled.div`
   align-items: center;
   height: 10vh;
   width: 100%;
-  background-color: rgba(17, 20, 24, 0.7);
+  background-color: rgba(17, 20, 24, 0);
   @media screen and (max-width: 500px) {
     height: 7vh;
   }

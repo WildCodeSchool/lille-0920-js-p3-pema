@@ -32,7 +32,6 @@ export const Nav = styled.nav`
     `
     left: 75%;
     transition: 350ms;
-    position:absolute;
     `}
   @media screen and (max-width: 1100px) {
     width: 50%;
