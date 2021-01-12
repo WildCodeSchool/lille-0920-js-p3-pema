@@ -17,9 +17,10 @@ export const HeaderBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  height: 10vh;
   width: 100%;
-  background-color: rgb(80, 92, 98);
+  //background-color: rgb(80, 92, 98);
+  background-color: #111418;
 `;
 
 export const Logo = styled.img`

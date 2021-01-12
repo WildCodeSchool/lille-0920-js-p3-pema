@@ -2,11 +2,12 @@ import {
   Main,
   IconBars,
   Nav,
-  Menu,
-  CloseIcon,
-  SectionsNav,
+  Ul,
+  Li,
   Item,
 } from "../../styled-components/Header/Sidebar";
+
+import { myItems } from "../../assets/sidebar";
 
 const Sidebar = ({ sidebar, setSidebar }) => {
   const showSidebar = () => {
@@ -16,26 +17,23 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   return (
     <Main>
       <IconBars onClick={showSidebar}>
-        <i className="far fa-bars"></i>
+        {sidebar ? (
+          <i className="fal fa-times"></i>
+        ) : (
+          <i className="fal fa-bars"></i>
+        )}
       </IconBars>
       <Nav sidebar={sidebar}>
-        <Menu>
-          <CloseIcon onClick={showSidebar}>
-            <i className="fal fa-times"></i>
-          </CloseIcon>
-          <SectionsNav onClick={showSidebar}>
-            <i className="fas fa-home"></i>
-            <Item>Accueil</Item>
-          </SectionsNav>
-          <SectionsNav onClick={showSidebar}>
-            <i className="fas fa-plane"></i>
-            <Item>Un voyage inédit</Item>
-          </SectionsNav>
-          <SectionsNav onClick={showSidebar}>
-            <i className="fas fa-handshake-alt"></i>
-            <Item>Nos partenaires et clients</Item>
-          </SectionsNav>
-        </Menu>
+        <Ul>
+          {myItems.map(item => {
+            return (
+              <Li onClick={showSidebar} key={item.id}>
+                <i className={item.icon}></i>
+                <Item>{item.name}</Item>
+              </Li>
+            );
+          })}
+        </Ul>
       </Nav>
     </Main>
   );

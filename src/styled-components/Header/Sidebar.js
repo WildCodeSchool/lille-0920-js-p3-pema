@@ -9,14 +9,16 @@ export const IconBars = styled.div`
   font-size: 30pt;
   cursor: pointer;
   color: white;
+  position: relative;
+  margin-right: 2vw;
+  z-index: 1;
   @media screen and (max-width: 700px) {
     font-size: 20pt;
   }
 `;
 
 export const Nav = styled.nav`
-  background-color: white;
-  color: #505c62;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 25%;
   height: 100vh;
   display: flex;
@@ -30,7 +32,7 @@ export const Nav = styled.nav`
     `
     left: 75%;
     transition: 350ms;
-  `}
+    `}
   @media screen and (max-width: 1100px) {
     width: 50%;
     ${({ sidebar }) =>
@@ -39,7 +41,7 @@ export const Nav = styled.nav`
       left: 50%;
       transition: 350ms;
       
-  `}
+      `}
   }
   @media screen and (max-width: 700px) {
     width: 100%;
@@ -48,27 +50,21 @@ export const Nav = styled.nav`
       `
       left: 0%;
       transition: 350ms;
-  `}
+      `}
   }
 `;
 
-export const Menu = styled.ul`
+export const Ul = styled.ul`
+  border: 1px solid red;
+
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #505c62;
 `;
 
-export const CloseIcon = styled.li`
-  display: flex;
-  margin-left: 80%;
-  padding: 5%;
-  font-size: 30pt;
-  cursor: pointer;
-`;
-
-export const SectionsNav = styled.li`
+export const Li = styled.li`
+  margin-top: 12vh;
   display: flex;
   overflow-y: hidden;
   justify-content: start;
@@ -76,11 +72,12 @@ export const SectionsNav = styled.li`
   text-align: center;
   height: 5%;
   margin-bottom: 1%;
-  font-size: 15pt;
+  font-size: 17pt;
   margin-bottom: 10%;
+  color: white;
   cursor: pointer;
   :hover {
-    border-bottom: 1px solid #505c62;
+    border-bottom: 1px solid #fff;
     display: flex;
   }
 `;
