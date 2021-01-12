@@ -6,7 +6,6 @@ export default function App() {
     <div>
       <Reset />
       <Header />
-      <p>hello</p>
     </div>
   );
 }
