@@ -25,7 +25,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
       </IconBars>
       <Nav sidebar={sidebar}>
         <Ul>
-          {myItems.map(item => {
+          {myItems.map((item) => {
             return (
               <Li onClick={showSidebar} key={item.id}>
                 <i className={item.icon}></i>

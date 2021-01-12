@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Trip from "../../assets/images/Header/trip.jpg";
 
 export const Main = styled.div`
