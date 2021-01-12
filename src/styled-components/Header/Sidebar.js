@@ -11,6 +11,9 @@ export const IconBars = styled.div`
   color: white;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 1100px) {
+    margin-right: 2vw;
+  }
   @media screen and (max-width: 700px) {
     font-size: 20pt;
     margin-right: 5vw;
@@ -35,6 +38,7 @@ export const Nav = styled.nav`
     `}
   @media screen and (max-width: 1100px) {
     width: 50%;
+    background-color: rgba(0, 0, 0, 1);
     ${({ sidebar }) =>
       sidebar &&
       `
@@ -77,6 +81,11 @@ export const Li = styled.li`
   :hover {
     border-bottom: 1px solid #fff;
     display: flex;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 23pt;
+    height: 8%;
+    //border: 1px solid red;
   }
   @media screen and (max-width: 700px) {
     font-size: 16pt;
