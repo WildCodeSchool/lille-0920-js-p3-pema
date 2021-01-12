@@ -86,7 +86,6 @@ export const Li = styled.li`
   @media screen and (max-width: 1100px) {
     font-size: 23pt;
     height: 8%;
-    //border: 1px solid red;
   }
   @media screen and (max-width: 700px) {
     font-size: 16pt;
