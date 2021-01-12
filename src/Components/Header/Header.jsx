@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Sidebar from "./Sidebar";
 import logo from "../../assets/images/logo.png";
+import Sidebar from "./Sidebar";
 import {
   Main,
   HeaderBar,
