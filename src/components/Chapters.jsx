@@ -23,9 +23,7 @@ import schema2 from "../assets/pictures/schema2_chapitre_2.png";
 
 function Chapters() {
   const [openModal, setOpenModal] = useState([
-    { modal1: "", isActive: false },
-    { modal2: "", isActive: false },
-    { modal3: "", isActive: false },
+    { modal: "", isActive: false },
   ]);
 
   const [isTabDisplay, setTabDisplay] = useState(false);
@@ -58,15 +56,15 @@ function Chapters() {
           className={isTabDisplay === true ? "displayShortcut" : "hideShortcut"}
         >
           <ShortcutChapter
-            className={openModal.modal1 === "id1" ? "borderBlue" : ""}
+            className={openModal.modal === "id1" ? "borderBlue" : ""}
           >
             <ChapterTitle
               onClick={() => {
-                setOpenModal({ modal1: "id1", isActive: true });
+                setOpenModal({ modal: "id1", isActive: true });
                 scrollTo();
               }}
               className={
-                openModal.modal1 === "id1"
+                openModal.modal === "id1"
                   ? "backgroundBlue"
                   : "backgroundBlueOpacity"
               }
@@ -76,15 +74,15 @@ function Chapters() {
           </ShortcutChapter>
 
           <ShortcutChapter
-            className={openModal.modal2 === "id2" ? "borderGold" : ""}
+            className={openModal.modal === "id2" ? "borderGold" : ""}
           >
             <ChapterTitle
               onClick={() => {
-                setOpenModal({ modal2: "id2", isActive: true });
+                setOpenModal({ modal: "id2", isActive: true });
                 scrollTo();
               }}
               className={
-                openModal.modal2 === "id2"
+                openModal.modal === "id2"
                   ? "backgroundGold"
                   : "backgroundGoldOpacity"
               }
@@ -94,15 +92,15 @@ function Chapters() {
           </ShortcutChapter>
 
           <ShortcutChapter
-            className={openModal.modal3 === "id3" ? "borderRed" : ""}
+            className={openModal.modal === "id3" ? "borderRed" : ""}
           >
             <ChapterTitle
               onClick={() => {
-                setOpenModal({ modal3: "id3", isActive: true });
+                setOpenModal({ modal: "id3", isActive: true });
                 scrollTo();
               }}
               className={
-                openModal.modal3 === "id3"
+                openModal.modal === "id3"
                   ? "backgroundRed"
                   : "backgroundRedOpacity"
               }
@@ -113,39 +111,39 @@ function Chapters() {
         </ShortcutContainer>
         <TabContainer>
           <ChapterContainer
-            onClick={() => setOpenModal({ modal1: "id1", isActive: true })}
+            onClick={() => setOpenModal({ modal: "id1", isActive: true })}
           >
             <BackgroundImageChapter
-              className={openModal.modal1 === "id1" ? "borderBlue" : ""}
+              className={openModal.modal === "id1" ? "borderBlue" : ""}
               src={tabl1}
             />
             <Chapter>Un voyage inédit au coeur de votre entreprise</Chapter>
           </ChapterContainer>
 
           <ChapterContainer
-            onClick={() => setOpenModal({ modal2: "id2", isActive: true })}
+            onClick={() => setOpenModal({ modal: "id2", isActive: true })}
           >
             <BackgroundImageChapter
-              className={openModal.modal2 === "id2" ? "borderGold" : ""}
+              className={openModal.modal === "id2" ? "borderGold" : ""}
               src={tabl2}
             />
             <Chapter>Carnet de voyage pratique</Chapter>
           </ChapterContainer>
 
           <ChapterContainer
-            onClick={() => setOpenModal({ modal3: "id3", isActive: true })}
+            onClick={() => setOpenModal({ modal: "id3", isActive: true })}
           >
             <BackgroundImageChapter
-              className={openModal.modal3 === "id3" ? "borderRed" : ""}
+              className={openModal.modal === "id3" ? "borderRed" : ""}
               src={tabl3}
             />
             <Chapter>Témoignages</Chapter>
           </ChapterContainer>
         </TabContainer>
         <BackgroundModal
-          className={openModal.modal1 === "id1" ? "borderBlue" : ""}
+          className={openModal.modal === "id1" ? "borderBlue" : ""}
         >
-          <Modal className={openModal.modal1 === "id1" ? "visible" : "hidden"}>
+          <Modal className={openModal.modal === "id1" ? "visible" : "hidden"}>
             <Title>
               Chapitre 1 : Un voyage inédit au coeur de votre entreprise
             </Title>
@@ -205,9 +203,9 @@ function Chapters() {
         </BackgroundModal>
 
         <BackgroundModal
-          className={openModal.modal2 === "id2" ? "borderGold" : ""}
+          className={openModal.modal === "id2" ? "borderGold" : ""}
         >
-          <Modal className={openModal.modal2 === "id2" ? "visible" : "hidden"}>
+          <Modal className={openModal.modal === "id2" ? "visible" : "hidden"}>
             <Title>
               Chapitre 2 : Carnet de voyage
               <br />
@@ -257,9 +255,9 @@ function Chapters() {
         </BackgroundModal>
 
         <BackgroundModal
-          className={openModal.modal3 === "id3" ? "borderRed" : ""}
+          className={openModal.modal === "id3" ? "borderRed" : ""}
         >
-          <Modal className={openModal.modal3 === "id3" ? "visible" : "hidden"}>
+          <Modal className={openModal.modal === "id3" ? "visible" : "hidden"}>
             <Title>Chapitre 3 : Souvenir du voyage</Title>
             <p>
               Quelques exemples valent mieux qu'un long discours, n'est-ce pas ?
