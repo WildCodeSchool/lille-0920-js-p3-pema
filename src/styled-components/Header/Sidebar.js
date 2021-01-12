@@ -18,7 +18,7 @@ export const IconBars = styled.div`
 `;
 
 export const Nav = styled.nav`
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 25%;
   height: 100vh;
   display: flex;
