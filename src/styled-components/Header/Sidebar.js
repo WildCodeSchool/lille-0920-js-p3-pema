@@ -10,15 +10,15 @@ export const IconBars = styled.div`
   cursor: pointer;
   color: white;
   position: relative;
-  margin-right: 2vw;
   z-index: 1;
   @media screen and (max-width: 700px) {
     font-size: 20pt;
+    margin-right: 5vw;
   }
 `;
 
 export const Nav = styled.nav`
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 1);
   width: 25%;
   height: 100vh;
   display: flex;
@@ -32,6 +32,7 @@ export const Nav = styled.nav`
     `
     left: 75%;
     transition: 350ms;
+    position:absolute;
     `}
   @media screen and (max-width: 1100px) {
     width: 50%;
@@ -55,8 +56,6 @@ export const Nav = styled.nav`
 `;
 
 export const Ul = styled.ul`
-  border: 1px solid red;
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,6 +78,9 @@ export const Li = styled.li`
   :hover {
     border-bottom: 1px solid #fff;
     display: flex;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 16pt;
   }
 `;
 
