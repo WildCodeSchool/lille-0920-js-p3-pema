@@ -7,19 +7,18 @@ export const Main = styled.div`
   ${({ sidebar }) =>
     sidebar &&
     `
+    position: relative;
     height: 100vh;
-    overflow-y: hidden;
   `}
 `;
 
 export const HeaderBar = styled.div`
   position: absolute;
-  padding: 0 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(17, 20, 24, 0.7);
   @media screen and (max-width: 500px) {
     height: 7vh;
@@ -28,6 +27,7 @@ export const HeaderBar = styled.div`
 
 export const Logo = styled.img`
   width: 7%;
+  padding-left: 1%;
   cursor: pointer;
   @media screen and (max-width: 1100px) {
     width: 10%;
@@ -41,7 +41,7 @@ export const Logo = styled.img`
 export const Container = styled.div`
   background-image: url(${Trip});
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
