@@ -1,5 +1,6 @@
-import Partners from "./Components/Partners";
+import Partners from "./Components/Partners/Partners";
 import Timeline from "./Components/Timeline/Timeline";
+
 import { Reset } from "styled-reset";
 import Header from "./Components/Header/Header";
 
