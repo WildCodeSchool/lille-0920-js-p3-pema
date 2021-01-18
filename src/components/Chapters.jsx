@@ -19,8 +19,6 @@ import Timeline from "./Timeline";
 import tabl1 from "../assets/pictures/tabl1.png";
 import tabl2 from "../assets/pictures/tabl2.png";
 import tabl3 from "../assets/pictures/tabl3.png";
-import schema1 from "../assets/pictures/schema1_chapter_1.png";
-import schema2 from "../assets/pictures/schema2_chapitre_2.png";
 import { modalContent } from "../assets/modalContent/modalContent";
 
 function Chapters() {
