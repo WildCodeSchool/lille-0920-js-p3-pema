@@ -13,6 +13,7 @@ import {
   ShortcutChapter,
   ShortcutContainer,
   ChapterTitle,
+  ParagraphOneSpacing,
 } from "../styled-components/ChaptersStyled";
 import Timeline from "./Timeline";
 import tabl1 from "../assets/pictures/tabl1.png";
@@ -20,11 +21,10 @@ import tabl2 from "../assets/pictures/tabl2.png";
 import tabl3 from "../assets/pictures/tabl3.png";
 import schema1 from "../assets/pictures/schema1_chapter_1.png";
 import schema2 from "../assets/pictures/schema2_chapitre_2.png";
+import { modalContent } from "../assets/modalContent/modalContent";
 
 function Chapters() {
-  const [openModal, setOpenModal] = useState([
-    { modal: "", isActive: false },
-  ]);
+  const [openModal, setOpenModal] = useState([{ modal: "", isActive: false }]);
 
   const [isTabDisplay, setTabDisplay] = useState(false);
 
@@ -137,68 +137,34 @@ function Chapters() {
               className={openModal.modal === "id3" ? "borderRed" : ""}
               src={tabl3}
             />
-            <Chapter>Témoignages</Chapter>
+            <Chapter>Nos clients</Chapter>
           </ChapterContainer>
         </TabContainer>
+
         <BackgroundModal
           className={openModal.modal === "id1" ? "borderBlue" : ""}
         >
           <Modal className={openModal.modal === "id1" ? "visible" : "hidden"}>
-            <Title>
-              Chapitre 1 : Un voyage inédit au coeur de votre entreprise
-            </Title>
-            <p>
-              Les problèmes, les défis, les challenges, sont autant
-              d’opportunités pour découvrir ou redécouvrir les richesses
-              insoupçonnées de votre entreprise.
-              <br />
-              <br />
-              La principale d’entre elle est votre équipe.
-              <br />
-              <br />
-              Trop souvent, « l’esprit d’équipe » est perdu. Pour diverses
-              raisons : un management inapproprié, le travail en silos, les
-              conflits d’intérêt, les déceptions, l’histoire de l’entreprise, le
-              manque de sens…
-              <br />
-              <br />
-              Lorsque l’esprit d’équipe est retrouvé, les motivations
-              reviennent, les idées naissent, les initiatives fleurissent, la
-              confiance et la solidarité se développent. Les problèmes et les
-              défis sont portés par toute l’équipe et plus seulement par son
-              dirigeant ou quelques managers.
-              <br />
-              <br />
-              Vos processus deviennent plus simples, plus robustes, plus agiles.
-              Des résultats émergent rapidement.
-              <br />
-              <br />
-              Le cercle vertueux se met en place. La culture de l’entreprise
-              change.
-              <br />
-              <br />
-            </p>
-            <SchemaContainer>
-              <img src={schema1} alt="schéma motivation entreprise" />
-            </SchemaContainer>
-            <p>
-              <br />
-              <br />
-              La première fois que nous avons déployé un projet de
-              transformation ainsi, nous étions animés par des convictions un
-              peu naïves, pour ne pas dire « bisounours », et il est légitime de
-              penser qu’il peut en être ainsi.
-              <br />
-              <br />
-              Mais nous sommes fiers des résultats qui en ont découlés chez nos
-              clients. Nous sommes fiers d’avoir redécouvert que les choses les
-              plus simples sont les plus efficaces. Nous sommes fiers de
-              remettre l’humain au cœur de l’entreprise et de sa performance.
-              <br />
-              <br />
-              Une question demeure : comment fait-on ? Par où commencer ? En
-              préparant son carnet de voyage ! Bien sûr.
-            </p>
+            {modalContent[0].map((content) => (
+              <div key={content.modalItem}>
+                <Title>{content.title}</Title>
+                {content.paragraph.map((textContent) => (
+                  <div>
+                    <ParagraphOneSpacing key={textContent.id}>
+                      {textContent.text}
+                    </ParagraphOneSpacing>
+                    {textContent.schema && (
+                      <SchemaContainer>
+                        <img
+                          src={textContent.schema.src}
+                          alt={textContent.schema.alt}
+                        />
+                      </SchemaContainer>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
           </Modal>
         </BackgroundModal>
 
@@ -206,49 +172,27 @@ function Chapters() {
           className={openModal.modal === "id2" ? "borderGold" : ""}
         >
           <Modal className={openModal.modal === "id2" ? "visible" : "hidden"}>
-            <Title>
-              Chapitre 2 : Carnet de voyage
-              <br />
-              Que dire ?
-            </Title>
-            <br />
-            <br />
-            <p>
-              Si chaque entreprise est unique, son voyage sera aussi unique.
-              Mais il y a des points de passage obligés. Des leviers importants.
-              Ils sont au nombre de 4.
-              <br />
-              <br />
-            </p>
-            <SchemaContainer>
-              <img src={schema2} alt="vision d'entreprise" />
-            </SchemaContainer>
-            <p>
-              <br />
-              <br />
-              Sans doute avez-vous déjà entendu parler de tout cela ?
-              <br />
-              Sans doute avez-vous le sentiment que vous connaissez ces leviers
-              et que vous les avez déjà essayés ?
-              <br />
-              Sans doute avez-vous une bonne vision, une bonne stratégie pour
-              votre entreprise ?
-              <br />
-              Sans doute avez-vous à maintes reprises essayé de vous appuyer sur
-              vos équipes ? Sans succès…
-              <br />
-              Sans doute estimez-vous que votre manière de manager est la seule
-              qui soit efficace pour votre entreprise.
-              <br />
-              Enfin, peut-être avez-vous déjà essayé d’être accompagné par un
-              consultant brillant, ou avez-vous déjà financé des formations au
-              management, au leadership… pour quels résultats ?
-              <br />
-              <br />
-              Vous avez raison. Rien de nouveau sous le soleil.
-              <br />
-              <br />
-            </p>
+            {modalContent[1].map((content) => (
+              <div key={content.modalItem}>
+                <Title>{content.title}</Title>
+                <Title id="subtitle">{content.subtitle}</Title>
+                {content.paragraph.map((textContent) => (
+                  <div>
+                    <ParagraphOneSpacing key={textContent.id}>
+                      {textContent.text}
+                    </ParagraphOneSpacing>
+                    {textContent.schema && (
+                      <SchemaContainer>
+                        <img
+                          src={textContent.schema.src}
+                          alt={textContent.schema.alt}
+                        />
+                      </SchemaContainer>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
             <Title> Qu’aurions-nous de différent ?</Title>
             <Timeline />
           </Modal>
