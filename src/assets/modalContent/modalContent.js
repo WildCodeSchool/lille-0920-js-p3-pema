@@ -96,4 +96,17 @@ export const modalContent = [
       ],
     },
   ],
+  [
+    {
+      modalItem: 3,
+      title: "Chapitre 3 : Souvenir du voyage",
+      paragraph: [
+        {
+          id: 1,
+          text:
+            "Quelques exemples valent mieux qu'un long discours, n'est-ce pas ?",
+        },
+      ],
+    },
+  ],
 ];
