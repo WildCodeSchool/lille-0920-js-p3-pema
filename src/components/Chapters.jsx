@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import scrollToElement from "scroll-to-element";
 import {
   Modal,
   TabPage,
@@ -20,9 +21,19 @@ function Chapters() {
   const [openModal, setOpenModal] = useState({ modal: "id1" });
   const [displayShortcut, setDisplayShortcut] = useState(true);
 
+  // const scrollToElement = require('scroll-to-element');
+
+  const scrollTo = () => {
+    scrollToElement("#topOfPage", {
+      offset: 0,
+      ease: "out-circ",
+      duration: 500,
+    });
+  };
+
   return (
     <BackgroundColor>
-      <TabPage>
+      <TabPage id="topOfPage">
         <ShortcutAndLogoContainer>
           <ShortcutContainer
             className={
@@ -33,6 +44,7 @@ function Chapters() {
               <ChapterTitle
                 onClick={() => {
                   setOpenModal({ modal: "id1" });
+                  scrollTo();
                 }}
                 className={openModal.modal === "id1" ? "isClicked" : ""}
               >
@@ -44,6 +56,7 @@ function Chapters() {
               <ChapterTitle
                 onClick={() => {
                   setOpenModal({ modal: "id2" });
+                  scrollTo();
                 }}
                 className={openModal.modal === "id2" ? "isClicked" : ""}
               >
@@ -55,6 +68,7 @@ function Chapters() {
               <ChapterTitle
                 onClick={() => {
                   setOpenModal({ modal: "id3" });
+                  scrollTo();
                 }}
                 className={openModal.modal === "id3" ? "isClicked" : ""}
               >
