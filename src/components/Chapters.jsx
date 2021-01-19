@@ -19,7 +19,7 @@ import Timeline from "./Timeline";
 import { modalContent } from "../assets/modalContent/modalContent";
 
 function Chapters() {
-  const [openModal, setOpenModal] = useState({ modal: "id3" });
+  const [openModal, setOpenModal] = useState({ modal: "id1" });
   const [displayShortcut, setDisplayShortcut] = useState(true);
 
   // const scrollToElement = require('scroll-to-element');
