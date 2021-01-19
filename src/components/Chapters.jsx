@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Aos from "aos";
 import {
   Modal,
   TabPage,
@@ -55,18 +54,13 @@ function Chapters() {
           </ShortcutChapter>
         </ShortcutContainer>
 
-        <Modal
-          id="modal"
-          className={openModal.modal === "id1" ? "visible" : "hidden"}
-        >
+        <Modal className={openModal.modal === "id1" ? "visible" : "hidden"}>
           {modalContent[0].map((content) => (
             <div key={content.modalItem}>
               <Title>{content.title}</Title>
               {content.paragraph.map((textContent) => (
-                <div>
-                  <ParagraphOneSpacing key={textContent.id}>
-                    {textContent.text}
-                  </ParagraphOneSpacing>
+                <div key={textContent.id}>
+                  <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
                   {textContent.schema && (
                     <SchemaContainer>
                       <img
@@ -87,10 +81,8 @@ function Chapters() {
               <Title>{content.title}</Title>
               <Title id="subtitle">{content.subtitle}</Title>
               {content.paragraph.map((textContent) => (
-                <div>
-                  <ParagraphOneSpacing key={textContent.id}>
-                    {textContent.text}
-                  </ParagraphOneSpacing>
+                <div key={textContent.id}>
+                  <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
                   {textContent.schema && (
                     <SchemaContainer>
                       <img
@@ -103,8 +95,8 @@ function Chapters() {
               ))}
             </div>
           ))}
-          <Title > Qu’aurions-nous de différent ?</Title>
-          <Timeline onScroll={Aos.refreshHard()}/>
+          <Title> Qu’aurions-nous de différent ?</Title>
+          <Timeline />
         </Modal>
 
         <Modal className={openModal.modal === "id3" ? "visible" : "hidden"}>
