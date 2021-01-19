@@ -1,5 +1,6 @@
 import Partners from "./Components/Partners/Partners";
 import Timeline from "./Components/Timeline/Timeline";
+import Footer from "./Components/Footer/Footer";
 
 import { Reset } from "styled-reset";
 import Header from "./Components/Header/Header";
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <Timeline />
       <Partners />
+      <Footer />
     </div>
   );
 }
