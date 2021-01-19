@@ -14,11 +14,12 @@ import {
   LogoHideShortcut,
   ShortcutAndLogoContainer,
 } from "../styled-components/ChaptersStyled";
+import Clients from "./Clients";
 import Timeline from "./Timeline";
 import { modalContent } from "../assets/modalContent/modalContent";
 
 function Chapters() {
-  const [openModal, setOpenModal] = useState({ modal: "id1" });
+  const [openModal, setOpenModal] = useState({ modal: "id3" });
   const [displayShortcut, setDisplayShortcut] = useState(true);
 
   // const scrollToElement = require('scroll-to-element');
@@ -139,18 +140,17 @@ function Chapters() {
           className={openModal.modal === "id3" ? "visible" : "hidden"}
           id={displayShortcut === false ? "hideShortcut" : "showShortcut"}
         >
-          <Title>Chapitre 3 : Souvenir du voyage</Title>
-          <p>
-            Quelques exemples valent mieux qu'un long discours, n'est-ce pas ?
-            <br />
-            <br />
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste,
-            tenetur! Aut facere soluta enim possimus, officiis labore totam
-            repellat qui omnis consequuntur corporis similique iure dicta
-            impedit ullam id ipsum.
-          </p>
+          {modalContent[2].map((content) => (
+            <div key={content.modalItem}>
+              <Title>{content.title}</Title>
+              {content.paragraph.map((textContent) => (
+                <div key={textContent.id}>
+                  <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
+                </div>
+              ))}
+            </div>
+          ))}
+          <Clients />
         </Modal>
       </TabPage>
     </BackgroundColor>
