@@ -1,50 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const borderGold = `rgba(215, 181, 99)`;
-const borderBlue = `rgba(36, 71, 128)`;
-const borderRed = `rgba(182, 0, 34)`;
-
-/////KEYFRAMES FOR BORDER/////////////////////////////////
-
-const easeColorBorder = keyframes`
-  0% {
-    background: linear-gradient(180deg, white, black); 
-  }
-  25% {
-    background: linear-gradient(180deg, rgba(0,0,0, 0.25),  rgba(0,0,0, 0.75)); 
-  }
-  50%{
-    background: linear-gradient(180deg, grey, grey); 
-  }
-  75% {
-    background: linear-gradient(180deg, rgba(0,0,0, 0.75)), rgba(0,0,0, 0.25))); 
-  }
-  100% {
-    background: linear-gradient(180deg, black, white);
-  }
-`;
-/////KEYFRAMES FOR BORDER/////////////////////////////////
-
-/////KEYFRAMES FOR TAB/////////////////////////////////
-
-const tabAppear = keyframes`
-0% {
-  opacity: 0;
-}
-100% {
-  opacity: 1;
-}
-`;
-
-const tabDisappear = keyframes`
-0% {
-  opacity: 1;
-}
-100% {
-  opacity: 0;
-}
-`;
-/////KEYFRAMES FOR TAB/////////////////////////////////
+import styled from "styled-components";
 
 export const TabContainer = styled.div`
   display: flex;
@@ -68,45 +22,15 @@ export const ChapterContainer = styled.div`
 `;
 
 export const ShortcutContainer = styled.div`
-  display: none;
-  &.displayShortcut {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 0 0 10px 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background: rgba(55, 55, 55, 0.5);
-    animation: ${tabAppear} 0.25s ease-in;
-  }
-  &.hideShortcut {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 0 0 10px 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background: rgba(55, 55, 55, 0.5);
-    animation: ${tabDisappear} 0.25s ease-in;
-    opacity: 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  background: rgba(65, 65, 65);
 `;
 
 export const ShortcutChapter = styled.div`
   padding: 0.5em;
   border-radius: 10px;
-  &.borderBlue {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderBlue} 60%, white);
-  }
-  &.borderGold {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderGold} 60%, white);
-  }
-  &.borderRed {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderRed} 60%, white);
-  }
 `;
 
 export const ChapterTitle = styled.h1`
@@ -114,86 +38,37 @@ export const ChapterTitle = styled.h1`
   justify-content: center;
   font-size: 2em;
   line-height: 50px;
-  text-shadow: 2px 2px 4px #ffffff;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
   width: 420px;
-
-  ////TAB IS CLICKED//////////////////////////////////
-  &.backgroundBlue {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(rgba(72, 122, 204) 40%, white);
+  &.isClicked{
+    background: rgba(135, 135, 135);
   }
-  &.backgroundGold {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(rgba(234, 207, 139) 40%, white);
+  &:hover {
+    background: rgba(135, 135, 135);
+    transition: all 0.35s ease-in;
   }
-  &.backgroundRed {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(rgba(203, 40, 70) 40%, white);
-  }
-  ///////////////////////////////////////////////////
-
-  ////TAB IS NOT CLICKED/////////////////////////////
-  &.backgroundBlueOpacity {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: white;
-    color: ${borderBlue};
-  }
-  &.backgroundGoldOpacity {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: white;
-    color: ${borderGold};
-  }
-  &.backgroundRedOpacity {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: white;
-    color: ${borderRed};
-  }
-  ///////////////////////////////////////////////////
 `;
 
 export const BackgroundImageChapter = styled.img`
   padding: 1em 1em 0em 1em;
   border-radius: 10px 10px 0px 0px;
-  &.borderBlue {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderBlue}, white);
-  }
-  &.borderGold {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderGold}, white);
-  }
-  &.borderRed {
-    animation: ${easeColorBorder} 0.15s ease-in;
-    background: linear-gradient(180deg, ${borderRed}, white);
-  }
 `;
 
 export const Modal = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  padding: 2em;
-  margin: 0.5em;
-  line-height: 2em;
-  filter: blur(inherit);
+  &.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background: white;
+    height: 70vh;
+    padding: 2em;
+    margin: 0.5em;
+    line-height: 2em;
+  }
   &.hidden {
     display: none;
-  }
-`;
-
-export const BackgroundModal = styled.div`
-  &.borderBlue {
-    background: linear-gradient(170deg, white 5%, ${borderBlue} 40%);
-    border-radius: 0px 10px 10px 10px;
-  }
-  &.borderGold {
-    background: linear-gradient(180deg, white 5%, ${borderGold} 40%);
-    border-radius: 10px;
-  }
-  &.borderRed {
-    background: linear-gradient(190deg, white 5%, ${borderRed} 40%);
-    border-radius: 10px 0px 10px 10px;
   }
 `;
 
@@ -227,9 +102,6 @@ export const BackgroundColor = styled.div`
   display: flex;
   align-items: center;
   background: linear-gradient(180deg, white, black);
-  height: 100vh;
-  &.grow {
-    height: max-content;
-    padding-bottom: 5vh;
-  }
+  height: 95vh;
+  padding-bottom: 5vh;
 `;
