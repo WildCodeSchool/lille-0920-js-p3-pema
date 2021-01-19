@@ -5,7 +5,7 @@ export const modalContent = [
   [
     {
       modalItem: 1,
-      title: "Chapitre 1 : Un voyage inédit au coeur de votre entreprise",
+      title: "Chapitre 1 : Inspiration",
       paragraph: [
         {
           id: 1,
