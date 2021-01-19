@@ -87,10 +87,9 @@ export const Modal = styled.div`
   &.visible {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background: white;
     height: max-content;
-    width: auto;
+    width: 65vw;
     padding: 2em;
     margin: 0.5em;
     line-height: 2em;
