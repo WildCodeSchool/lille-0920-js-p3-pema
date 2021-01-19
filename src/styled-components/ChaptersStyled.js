@@ -5,16 +5,6 @@ export const TabContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Chapter = styled.h1`
-  position: absolute;
-  width: 300px;
-  color: white;
-  font-weight: 500;
-  font-size: 2em;
-  font-style: italic;
-  text-shadow: 1.5px 0 black;
-`;
-
 export const ChapterContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -23,14 +13,52 @@ export const ChapterContainer = styled.div`
 
 export const ShortcutContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 200px;
   border-radius: 0 0 10px 10px;
   background: rgba(65, 65, 65);
+  &.hideShortcut {
+    opacity: 0;
+    translate: -20vw;
+    transition: all 0.5s ease-in-out;
+  }
+  &.showShortcut {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
 `;
 
 export const ShortcutChapter = styled.div`
   padding: 0.5em;
   border-radius: 10px;
+`;
+
+export const HideShortcut = styled.div`
+  padding: 0.5em;
+  border-radius: 10px;
+  width: min-content;
+`;
+
+export const LogoHideShortcut = styled.i`
+  font-size: 30px;
+  color: white;
+  &#rotateLeft {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in;
+  }
+  &#rotateRight {
+    transform: rotate(360deg);
+    transition: all 0.2s ease-in;
+  }
+`;
+
+export const ShortcutAndLogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  position: sticky;
+  top: 5px;
+  height: min-content;
 `;
 
 export const ChapterTitle = styled.h1`
@@ -40,13 +68,13 @@ export const ChapterTitle = styled.h1`
   line-height: 50px;
   color: white;
   text-shadow: 2px 2px 4px #000;
-  width: 420px;
-  &.isClicked{
-    background: rgba(135, 135, 135);
-  }
+  width: 350px;
   &:hover {
     background: rgba(135, 135, 135);
     transition: all 0.35s ease-in;
+  }
+  &.isClicked {
+    background: rgba(135, 135, 135);
   }
 `;
 
@@ -60,15 +88,22 @@ export const Modal = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
     background: white;
-    height: 70vh;
+    height: max-content;
+    width: auto;
     padding: 2em;
     margin: 0.5em;
     line-height: 2em;
   }
   &.hidden {
     display: none;
+  }
+  &#hideShortcut {
+    translate: -10vw;
+    transition: all 0.5s ease-in;
+  }
+  &#showShortcut {
+    transition: all 0.5s ease-in;
   }
 `;
 
@@ -94,14 +129,13 @@ export const SchemaContainer = styled.div`
 
 export const TabPage = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 3vw 5vw;
+  margin: 3vw 5vw 3vw 1vw;
 `;
 
 export const BackgroundColor = styled.div`
   display: flex;
   align-items: center;
   background: linear-gradient(180deg, white, black);
-  height: 95vh;
+  height: auto;
   padding-bottom: 5vh;
 `;

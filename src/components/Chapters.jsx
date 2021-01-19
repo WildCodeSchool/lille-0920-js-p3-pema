@@ -9,52 +9,71 @@ import {
   ShortcutContainer,
   ChapterTitle,
   ParagraphOneSpacing,
+  HideShortcut,
+  LogoHideShortcut,
+  ShortcutAndLogoContainer,
 } from "../styled-components/ChaptersStyled";
 import Timeline from "./Timeline";
 import { modalContent } from "../assets/modalContent/modalContent";
 
 function Chapters() {
   const [openModal, setOpenModal] = useState({ modal: "id1" });
+  const [displayShortcut, setDisplayShortcut] = useState(true);
 
   return (
     <BackgroundColor>
       <TabPage>
-        <ShortcutContainer>
-          <ShortcutChapter>
-            <ChapterTitle
-              onClick={() => {
-                setOpenModal({ modal: "id1" });
-              }}
-              className={openModal.modal === "id1" ? "isClicked" : ""}
-            >
-              Inspiration
-            </ChapterTitle>
-          </ShortcutChapter>
+        <ShortcutAndLogoContainer>
+          <ShortcutContainer
+            className={
+              displayShortcut === false ? "hideShortcut" : "showShortcut"
+            }
+          >
+            <ShortcutChapter>
+              <ChapterTitle
+                onClick={() => {
+                  setOpenModal({ modal: "id1" });
+                }}
+                className={openModal.modal === "id1" ? "isClicked" : ""}
+              >
+                {displayShortcut === true ? "Inspiration" : " "}
+              </ChapterTitle>
+            </ShortcutChapter>
 
-          <ShortcutChapter>
-            <ChapterTitle
-              onClick={() => {
-                setOpenModal({ modal: "id2" });
-              }}
-              className={openModal.modal === "id2" ? "isClicked" : ""}
-            >
-              Carnet de voyage
-            </ChapterTitle>
-          </ShortcutChapter>
+            <ShortcutChapter>
+              <ChapterTitle
+                onClick={() => {
+                  setOpenModal({ modal: "id2" });
+                }}
+                className={openModal.modal === "id2" ? "isClicked" : ""}
+              >
+                {displayShortcut === true ? "Carnet de voyage" : " "}
+              </ChapterTitle>
+            </ShortcutChapter>
 
-          <ShortcutChapter>
-            <ChapterTitle
-              onClick={() => {
-                setOpenModal({ modal: "id3" });
-              }}
-              className={openModal.modal === "id3" ? "isClicked" : ""}
-            >
-              Clients
-            </ChapterTitle>
-          </ShortcutChapter>
-        </ShortcutContainer>
+            <ShortcutChapter>
+              <ChapterTitle
+                onClick={() => {
+                  setOpenModal({ modal: "id3" });
+                }}
+                className={openModal.modal === "id3" ? "isClicked" : ""}
+              >
+                {displayShortcut === true ? "Clients" : " "}{" "}
+              </ChapterTitle>
+            </ShortcutChapter>
+          </ShortcutContainer>
+          <HideShortcut onClick={() => setDisplayShortcut(!displayShortcut)}>
+            <LogoHideShortcut
+              className="fas fa-chevron-circle-left"
+              id={displayShortcut === false ? "rotateLeft" : "rotateRight"}
+            ></LogoHideShortcut>
+          </HideShortcut>
+        </ShortcutAndLogoContainer>
 
-        <Modal className={openModal.modal === "id1" ? "visible" : "hidden"}>
+        <Modal
+          className={openModal.modal === "id1" ? "visible" : "hidden"}
+          id={displayShortcut === false ? "hideShortcut" : "showShortcut"}
+        >
           {modalContent[0].map((content) => (
             <div key={content.modalItem}>
               <Title>{content.title}</Title>
@@ -75,7 +94,10 @@ function Chapters() {
           ))}
         </Modal>
 
-        <Modal className={openModal.modal === "id2" ? "visible" : "hidden"}>
+        <Modal
+          className={openModal.modal === "id2" ? "visible" : "hidden"}
+          id={displayShortcut === false ? "hideShortcut" : "showShortcut"}
+        >
           {modalContent[1].map((content) => (
             <div key={content.modalItem}>
               <Title>{content.title}</Title>
@@ -99,19 +121,16 @@ function Chapters() {
           <Timeline />
         </Modal>
 
-        <Modal className={openModal.modal === "id3" ? "visible" : "hidden"}>
+        <Modal
+          className={openModal.modal === "id3" ? "visible" : "hidden"}
+          id={displayShortcut === false ? "hideShortcut" : "showShortcut"}
+        >
           <Title>Chapitre 3 : Souvenir du voyage</Title>
           <p>
             Quelques exemples valent mieux qu'un long discours, n'est-ce pas ?
             <br />
             <br />
           </p>
-          <SchemaContainer>
-            <img
-              src="https://via.placeholder.com/1250x500?text=Place+carrousel+here"
-              alt="carrousel"
-            />
-          </SchemaContainer>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste,
             tenetur! Aut facere soluta enim possimus, officiis labore totam
