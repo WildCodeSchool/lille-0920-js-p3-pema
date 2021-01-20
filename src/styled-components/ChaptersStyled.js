@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ParagraphOneSpacing = styled.p`
   line-height: 2em;
 `;
@@ -12,7 +11,7 @@ export const Schema = styled.img`
 export const SchemaContainer = styled.div`
   display: flex;
   justify-content: center;
-`;  
+`;
 
 export const Section = styled.div`
   &.visible {

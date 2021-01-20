@@ -14,7 +14,7 @@ function Chapters() {
   return (
     <SectionContainer>
       <Section>
-      {modalContent[0].map((content) => (
+        {modalContent[0].map((content) => (
           <div key={content.modalItem}>
             <Title>{content.title}</Title>
             {content.paragraph.map((textContent) => (
