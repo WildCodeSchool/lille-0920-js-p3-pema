@@ -30,6 +30,6 @@ export const DisplayLogo = styled.div`
 export const Logo = styled.img`
   width: ${({ id }) =>
     (id >= 1 && id < 4 && "14vw") || (id > 3 && id < 7 && "10vw")};
-  height: max-content;
+  height: auto;
   margin: 2vw;
 `;
