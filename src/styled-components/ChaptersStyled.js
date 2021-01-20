@@ -27,6 +27,10 @@ export const ParagraphOneSpacing = styled.p`
   line-height: 2em;
 `;
 
+export const Schema = styled.img`
+  margin: 4vh;
+`;
+
 export const SchemaContainer = styled.div`
   display: flex;
   justify-content: center;

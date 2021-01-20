@@ -1,6 +1,7 @@
 import {
   Modal,
   ParagraphOneSpacing,
+  Schema,
   SchemaContainer,
   TabPage,
   Title,
@@ -24,7 +25,7 @@ function Chapters({ openModal, displayShortcut }) {
                   <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
                   {textContent.schema && (
                     <SchemaContainer>
-                      <img
+                      <Schema
                         src={textContent.schema.src}
                         alt={textContent.schema.alt}
                       />
@@ -49,7 +50,7 @@ function Chapters({ openModal, displayShortcut }) {
                   <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
                   {textContent.schema && (
                     <SchemaContainer>
-                      <img
+                      <Schema
                         src={textContent.schema.src}
                         alt={textContent.schema.alt}
                       />
