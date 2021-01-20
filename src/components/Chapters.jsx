@@ -22,8 +22,6 @@ function Chapters() {
   const [openModal, setOpenModal] = useState({ modal: "id1" });
   const [displayShortcut, setDisplayShortcut] = useState(true);
 
-  // const scrollToElement = require('scroll-to-element');
-
   const scrollTo = () => {
     scrollToElement("#topOfPage", {
       offset: 0,
