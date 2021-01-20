@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import scrollToElement from "scroll-to-element";
 import {
-  BackgroundColor,
-  ChapterTitle,
-  HideShortcut,
-  LogoHideShortcut,
   Modal,
   ParagraphOneSpacing,
   SchemaContainer,
-  ShortcutChapter,
-  ShortcutContainer,
-  ShortcutAndLogoContainer,
   TabPage,
   Title,
 } from "../styled-components/ChaptersStyled";
@@ -18,71 +9,9 @@ import Clients from "./Clients";
 import Timeline from "./Timeline";
 import { modalContent } from "../assets/modalContent/modalContent";
 
-function Chapters() {
-  const [openModal, setOpenModal] = useState({ modal: "id1" });
-  const [displayShortcut, setDisplayShortcut] = useState(true);
-
-  const scrollTo = () => {
-    scrollToElement("#topOfPage", {
-      offset: 0,
-      ease: "out-circ",
-      duration: 500,
-    });
-  };
-
+function Chapters({ openModal, displayShortcut }) {
   return (
-    <BackgroundColor>
       <TabPage id="topOfPage">
-        <ShortcutAndLogoContainer>
-          <ShortcutContainer
-            className={
-              displayShortcut === false ? "hideShortcut" : "showShortcut"
-            }
-          >
-            <ShortcutChapter>
-              <ChapterTitle
-                onClick={() => {
-                  setOpenModal({ modal: "id1" });
-                  scrollTo();
-                }}
-                className={openModal.modal === "id1" ? "isClicked" : ""}
-              >
-                {displayShortcut === true ? "Inspiration" : " "}
-              </ChapterTitle>
-            </ShortcutChapter>
-
-            <ShortcutChapter>
-              <ChapterTitle
-                onClick={() => {
-                  setOpenModal({ modal: "id2" });
-                  scrollTo();
-                }}
-                className={openModal.modal === "id2" ? "isClicked" : ""}
-              >
-                {displayShortcut === true ? "Carnet de voyage" : " "}
-              </ChapterTitle>
-            </ShortcutChapter>
-
-            <ShortcutChapter>
-              <ChapterTitle
-                onClick={() => {
-                  setOpenModal({ modal: "id3" });
-                  scrollTo();
-                }}
-                className={openModal.modal === "id3" ? "isClicked" : ""}
-              >
-                {displayShortcut === true ? "Clients" : " "}{" "}
-              </ChapterTitle>
-            </ShortcutChapter>
-          </ShortcutContainer>
-          <HideShortcut onClick={() => setDisplayShortcut(!displayShortcut)}>
-            <LogoHideShortcut
-              className="fas fa-chevron-circle-left"
-              id={displayShortcut === false ? "rotateLeft" : "rotateRight"}
-            ></LogoHideShortcut>
-          </HideShortcut>
-        </ShortcutAndLogoContainer>
-
         <Modal
           className={openModal.modal === "id1" ? "visible" : "hidden"}
           id={displayShortcut === false ? "hideShortcut" : "showShortcut"}
@@ -151,7 +80,6 @@ function Chapters() {
           <Clients />
         </Modal>
       </TabPage>
-    </BackgroundColor>
   );
 }
 
