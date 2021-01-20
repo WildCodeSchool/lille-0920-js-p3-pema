@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const Logo = styled.img`
-  width: ${({ id }) =>
-    (id >= 1 && id < 4 && "14vw") || (id > 3 && id < 7 && "10vw")};
-  margin: 2vw;
-`;
-
 export const CategoryName = styled.h1`
   font-size: 1.5em;
   font-weight: bold;
@@ -16,17 +10,26 @@ export const CategoryName = styled.h1`
   background: linear-gradient(170deg, #ce4b4b, white);
 `;
 
-export const DisplayLogo = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  align-items: center;
-  align-self: start;
-`;
-
 export const ClientsContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  height: auto;
+  width: min-content;
   margin: 2vh;
+`;
+
+export const DisplayLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 20vw;
   border: 2px solid #ce4b4b;
+  margin: 1vw;
+`;
+
+export const Logo = styled.img`
+  width: ${({ id }) =>
+    (id >= 1 && id < 4 && "14vw") || (id > 3 && id < 7 && "10vw")};
+  height: max-content;
+  margin: 2vw;
 `;
