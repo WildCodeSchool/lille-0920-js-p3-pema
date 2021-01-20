@@ -2,18 +2,20 @@ import styled from "styled-components";
 
 export const CategoryName = styled.h1`
   font-size: 1.5em;
-  font-weight: bold;
-  margin: 2vh;
+  font-weight: 500;
+  margin: 4vh;
   padding-left: 1vw;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
-  background: linear-gradient(170deg, #ce4b4b, white);
+  color: black;
+  /* text-shadow: 2px 2px 4px #000; */
+  /* background: linear-gradient(170deg, black, white); */
+  /* box-shadow: 2px 2px 4px black; */
 `;
 
 export const ClientsContainer = styled.div`
   display: flex;
+  justify-content: center;
   height: auto;
-  width: min-content;
+  width: 95vw;
   margin: 2vh;
 `;
 
@@ -23,7 +25,8 @@ export const DisplayLogo = styled.div`
   justify-content: center;
   height: 30vh;
   width: 20vw;
-  border: 2px solid #ce4b4b;
+  border: 2px solid black;
+  box-shadow: 4px 4px 10px grey;
   margin: 1vw;
 `;
 

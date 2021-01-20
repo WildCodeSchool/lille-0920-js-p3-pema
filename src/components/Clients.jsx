@@ -14,13 +14,8 @@ export default function Clients() {
           <CategoryName>{client.name}</CategoryName>
           <ClientsContainer>
             {client.logos.map((logo) => (
-              <DisplayLogo>
-                <Logo
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  id={client.id}
-                />
+              <DisplayLogo key={logo.alt}>
+                <Logo src={logo.src} alt={logo.alt} id={client.id} />
               </DisplayLogo>
             ))}
           </ClientsContainer>
