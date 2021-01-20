@@ -6,9 +6,6 @@ export const CategoryName = styled.h1`
   margin: 4vh;
   padding-left: 1vw;
   color: black;
-  /* text-shadow: 2px 2px 4px #000; */
-  /* background: linear-gradient(170deg, black, white); */
-  /* box-shadow: 2px 2px 4px black; */
 `;
 
 export const ClientsContainer = styled.div`
