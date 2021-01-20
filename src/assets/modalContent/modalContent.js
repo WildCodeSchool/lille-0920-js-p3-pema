@@ -5,7 +5,7 @@ export const modalContent = [
   [
     {
       modalItem: 1,
-      title: "Chapitre 1 : Inspiration",
+      title: "Inspiration",
       paragraph: [
         {
           id: 1,
@@ -50,7 +50,7 @@ export const modalContent = [
   [
     {
       modalItem: 2,
-      title: "Chapitre 2 : Carnet de voyage",
+      title: "Carnet de voyage",
       subtitle: "Que dire ?",
       paragraph: [
         {
@@ -99,7 +99,7 @@ export const modalContent = [
   [
     {
       modalItem: 3,
-      title: "Chapitre 3 : Souvenir du voyage",
+      title: "Souvenir du voyage",
       paragraph: [
         {
           id: 1,
