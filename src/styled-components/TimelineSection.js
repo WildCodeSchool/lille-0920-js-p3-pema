@@ -5,7 +5,7 @@ export const TimelineSection = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 65vw;
+  width: 95vw;
   margin-bottom: 5vh;
   font-family: GT Walsheim;
 `;
