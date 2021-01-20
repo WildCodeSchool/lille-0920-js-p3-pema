@@ -98,7 +98,7 @@ export const Modal = styled.div`
     display: none;
   }
   &#hideShortcut {
-    translate: -10vw;
+    translate: -7.5vw;
     transition: all 0.5s ease-in;
   }
   &#showShortcut {
