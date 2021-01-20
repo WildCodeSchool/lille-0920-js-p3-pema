@@ -10,12 +10,12 @@ export default function Clients() {
   return (
     <div>
       {myClients.map((client) => (
-        <div>
+        <div key={client.id} >
           <CategoryName>{client.name}</CategoryName>
-          <ClientsContainer>
-            <DisplayLogo>
+          <ClientsContainer >
+            <DisplayLogo >
               {client.logos.map((logo) => (
-                <Logo key={logo.alt} src={logo.src} alt={logo.alt} />
+                <Logo key={logo.alt} src={logo.src} alt={logo.alt} id={client.id}/>
               ))}
             </DisplayLogo>
           </ClientsContainer>
