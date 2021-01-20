@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import scrollToElement from "scroll-to-element";
 import {
-  Modal,
-  TabPage,
-  Title,
-  SchemaContainer,
   BackgroundColor,
-  ShortcutChapter,
-  ShortcutContainer,
   ChapterTitle,
-  ParagraphOneSpacing,
   HideShortcut,
   LogoHideShortcut,
+  Modal,
+  ParagraphOneSpacing,
+  SchemaContainer,
+  ShortcutChapter,
+  ShortcutContainer,
   ShortcutAndLogoContainer,
+  TabPage,
+  Title,
 } from "../styled-components/ChaptersStyled";
 import Clients from "./Clients";
 import Timeline from "./Timeline";
