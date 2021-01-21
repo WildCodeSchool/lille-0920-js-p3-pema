@@ -44,9 +44,7 @@ const FooterContainer = () => {
           </Column>
         </Row>
       </Wrapper>
-      <Droit>
-        Copyright 2021 Pema Consulting Tous Droits Réservés.
-      </Droit>
+      <Droit>Copyright 2021 Pema Consulting Tous Droits Réservés.</Droit>
     </Footer>
   );
 };
