@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import trip from "../../assets/images/Header/trip.jpeg";
 import nuit from "../../assets/images/Footer/nuit.jpeg";
 
 export const Footer = styled.footer`
@@ -78,5 +77,5 @@ export const Droit = styled.div`
   margin-left: 40px;
   font-weight: bolder;
   margin-top: 10px;
-  text-align:center;
+  text-align: center;
 `;
