@@ -1,10 +1,10 @@
 import styled from "styled-components";
 //import trip from "../../assets/images/Header/trip.jpeg";
-import nuittt from "../../assets/images/Footer/nuittt.jpeg";
+import nuit from "../../assets/images/Footer/nuit.jpeg";
 
 export const Footer = styled.footer`
   width: 100%;
-  background-image: url(${nuittt});
+  background-image: url(${nuit});
   font-family: GT Walsheim;
   color: white;
   height: 40vh;
