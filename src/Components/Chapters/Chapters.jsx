@@ -17,7 +17,7 @@ function Chapters() {
         {myChapters.map((content, i) => (
           <div key={content.modalItem}>
             <Title>{content.title}</Title>
-            {content.paragraph.map(textContent => (
+            {content.paragraph.map((textContent) => (
               <div key={textContent.id}>
                 <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
                 {textContent.schema && (
