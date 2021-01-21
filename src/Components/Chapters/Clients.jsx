@@ -1,10 +1,10 @@
-import { myClients } from "../assets/clients/clients";
+import { myClients } from "../../assets/clients";
 import {
   Logo,
   CategoryName,
   DisplayLogo,
   ClientsContainer,
-} from "../styled-components/ClientsStyled";
+} from "../../styled-components/Clients";
 
 export default function Clients() {
   return (
@@ -13,11 +13,11 @@ export default function Clients() {
         .sort(function (a, b) {
           return b.logos.length - a.logos.length;
         })
-        .map((client) => (
+        .map(client => (
           <div key={client.id}>
             <CategoryName>{client.name}</CategoryName>
             <ClientsContainer>
-              {client.logos.map((logo) => (
+              {client.logos.map(logo => (
                 <DisplayLogo key={logo.alt}>
                   <Logo src={logo.src} alt={logo.alt} id={client.id} />
                 </DisplayLogo>

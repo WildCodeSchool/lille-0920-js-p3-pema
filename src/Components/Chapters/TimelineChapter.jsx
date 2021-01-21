@@ -1,19 +1,20 @@
 import { useEffect } from "react";
 import Aos from "aos";
+
 import "aos/dist/aos.css";
 import {
-  TimelineSection,
+  Main,
   TimelineContainer,
   Line,
-  Bloc,
-  BlocItems,
   BlocContainer,
-  TimelineTitle,
+  BlocItems,
+  Title,
   Paragraph,
+  Bloc,
   LastContainer,
   LastSentence,
-} from "../styled-components/TimelineSection";
-import { myBlocs } from "../assets/timeline/TimelineData";
+} from "../../styled-components/Timeline";
+import { myBlocs } from "../../assets/timelineChapter";
 
 function Timeline() {
   useEffect(() => {
@@ -21,16 +22,16 @@ function Timeline() {
   });
 
   return (
-    <TimelineSection>
+    <Main>
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>
-          {myBlocs.map((bloc) => (
+          {myBlocs.map(bloc => (
             <Bloc key={bloc.id}>
               <BlocItems key={bloc.id} id={bloc.id}>
-                <TimelineTitle data-aos="zoom-out-down" id={bloc.id}>
+                <Title data-aos="zoom-out-down" id={bloc.id}>
                   {bloc.title}
-                </TimelineTitle>
+                </Title>
                 <Paragraph data-aos="zoom-out-down">{bloc.text}</Paragraph>
               </BlocItems>
               <Line></Line>
@@ -43,7 +44,7 @@ function Timeline() {
           Nous leur offrons bien plus !
         </LastSentence>
       </LastContainer>
-    </TimelineSection>
+    </Main>
   );
 }
 
