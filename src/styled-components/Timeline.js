@@ -58,7 +58,7 @@ export const BlocItems = styled.div`
   position: relative;
   width: 80%;
   height: 10vh;
-  left: ${({ id }) => id === 1 && `-100%`};
+  left: ${({ id }) => (id === 1 || id === 3) && `-100%`};
   padding-top: 10%;
   padding-bottom: 3%;
   @media screen and (max-width: 1100px) {
