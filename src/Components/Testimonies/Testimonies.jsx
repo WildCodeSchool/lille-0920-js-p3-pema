@@ -14,7 +14,7 @@ const Testimonies = () => {
     <Main className="slide-container">
       <Title>Quelques témoignages .. </Title>
       <Slide autoplay>
-        {myTestimonies.map(testimony => {
+        {myTestimonies.map((testimony) => {
           return (
             <Container>
               <Text>{testimony.text}</Text>
