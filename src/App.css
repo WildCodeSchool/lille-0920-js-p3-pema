@@ -1,0 +1,10 @@
+.app {
+  font-family: GT Walsheim;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .react-slideshow-container .default-nav {
+    display: none;
+  }
+}
