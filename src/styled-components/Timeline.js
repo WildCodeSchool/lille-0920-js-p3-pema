@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-export const TimelineSection = styled.div`
+export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 95vw;
-  margin-bottom: 5vh;
-  font-family: GT Walsheim;
+  width: 100%;
 `;
 
 export const TimelineContainer = styled.div`
@@ -58,13 +56,15 @@ export const BlocItems = styled.div`
   color: black;
   text-align: center;
   position: relative;
-  width: 85%;
-  height: min-content;
-  left: ${({ id }) => (id === 0 || id === 2) && `-100%`};
+  width: 80%;
+  height: 10vh;
+  left: ${({ id }) => (id === 1 || id === 3) && `-100%`};
+  padding-top: 10%;
+  padding-bottom: 3%;
   @media screen and (max-width: 1100px) {
     height: auto;
     ${({ id }) =>
-      (id !== 1 || id !== 3) &&
+      id !== 1 &&
       `
       left: 0;
       width: 80%;
@@ -77,9 +77,10 @@ export const BlocItems = styled.div`
   }
 `;
 
-export const TimelineTitle = styled.span`
+export const Title = styled.span`
   font-size: 20pt;
   color: #505c62;
+  margin-top: ${({ id }) => id === 0 && `5%`};
   @media screen and (max-width: 500px) {
     font-size: 18pt;
   }

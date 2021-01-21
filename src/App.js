@@ -1,4 +1,4 @@
-import Chapters from "./components/Chapters";
+import Chapters from "./Components/Chapters/Chapters";
 import { Reset } from "styled-reset";
 
 export default function App() {
