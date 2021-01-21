@@ -17,10 +17,9 @@ const FooterContainer = () => {
       <Wrapper>
         <Row>
           <Column>
-            <Title>Navigation</Title>
+            <Title>Notre Agence</Title>
             <Link href="#">Accueil</Link>
             <Link href="#">Témoignages</Link>
-            <Link href="#">Politique de confidentialité</Link>
           </Column>
           <Column>
             <Title>Contact</Title>
@@ -46,8 +45,7 @@ const FooterContainer = () => {
         </Row>
       </Wrapper>
       <Droit>
-        Copyright @2021 Tous droits réservés.
-        <Link href="#">Mentions légales</Link>
+        Copyright 2021 Pema Consulting Tous Droits Réservés.
       </Droit>
     </Footer>
   );

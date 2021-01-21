@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import trip from "../../assets/images/Header/trip.jpeg";
+//import trip from "../../assets/images/Header/trip.jpeg";
+import nuittt from "../../assets/images/Footer/nuittt.jpeg";
 
 export const Footer = styled.footer`
   width: 100%;
-  background-image: url(${trip});
+  background-image: url(${nuittt});
   font-family: GT Walsheim;
   color: white;
   height: 40vh;
@@ -14,6 +15,7 @@ export const Logo = styled.img`
   width: 18%;
   padding-left: 1%;
   margin-top: -10px;
+
   cursor: pointer;
   @media screen and (max-width: 1100px) {
     width: 10%;
@@ -76,4 +78,5 @@ export const Droit = styled.div`
   margin-left: 40px;
   font-weight: bolder;
   margin-top: 10px;
+  text-align:center;
 `;

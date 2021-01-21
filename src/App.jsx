@@ -13,6 +13,7 @@ export default function App() {
       <Timeline />
       <Partners />
       <Footer />
+     
     </div>
   );
 }
