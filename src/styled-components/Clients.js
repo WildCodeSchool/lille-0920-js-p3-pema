@@ -14,7 +14,6 @@ export const MainContainer = styled.div`
   height: auto;
   width: auto;
   margin: 2vh;
-  border: 2px solid red;
 `;
 
 export const DisplayLogo = styled.div`
@@ -23,8 +22,6 @@ export const DisplayLogo = styled.div`
   justify-content: center;
   height: 30vh;
   width: 20vw;
-  border: 2px solid black;
-  box-shadow: 4px 4px 10px grey;
   margin: 1vw;
 `;
 
