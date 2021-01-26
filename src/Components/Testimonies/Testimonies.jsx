@@ -16,7 +16,7 @@ const Testimonies = () => {
       <Slide autoplay>
         {myTestimonies.map((testimony) => {
           return (
-            <Container>
+            <Container key={testimony.id}>
               <Text>{testimony.text}</Text>
               <Name>{testimony.name}</Name>
             </Container>
