@@ -1,6 +1,28 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import imageHeader from "../../assets/images/Header/trip.jpeg";
 
 import Trip from "../../assets/images/Header/trip.jpeg";
+
+/*-----------------------KEYFRAMES-------------*/
+
+const headerAppear = keyframes`
+from {
+  opacity: 0;
+}
+to{
+  opacity: 1;
+}
+`;
+
+const headerDisappear = keyframes`
+from {
+  opacity: 1;
+}
+to{
+  opacity: 0;
+}
+`;
+/*-----------------------KEYFRAMES-------------*/
 
 export const Main = styled.div`
   display: flex;
@@ -13,14 +35,31 @@ export const Main = styled.div`
   `}
 `;
 
-export const HeaderBar = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  width: 100%;
-  background-color: rgba(17, 20, 24, 0);
+export const HeaderBarStyled = styled.div`
+  &.absolute {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    color: white;
+    background-color: rgba(17, 20, 24, 0);
+    animation: ${headerDisappear} 0.25s ease-in;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-image: url(${imageHeader});
+    animation: ${headerAppear} 0.25s ease-in;
+  }
   @media screen and (max-width: 500px) {
     height: 7vh;
   }
@@ -70,4 +109,15 @@ export const Title = styled.h1`
     font-size: 12pt;
     -webkit-text-stroke-width: 0px;
   }
+`;
+
+export const TagLine = styled.h2`
+  font-style: italic;
+  color: white;
+`;
+
+export const LogoAndTagLine = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
