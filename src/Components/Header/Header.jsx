@@ -1,24 +1,15 @@
-import React, { useState } from "react";
-
-import logo from "../../assets/images/logo.png";
-import Sidebar from "./Sidebar";
+import React from "react";
 import {
   Main,
-  HeaderBar,
   Container,
   Title,
-  Logo,
   LogoPema,
 } from "../../styled-components/Header/Header";
+import logo from "../../assets/images/logo.png";
 
-const Header = () => {
-  const [sidebar, setSidebar] = useState(false);
+const Header = ({ sidebar, setSidebar }) => {
   return (
-    <Main sidebar={sidebar}>
-      <HeaderBar>
-        <Logo src={logo} alt="logo pema consulting" />
-        <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
-      </HeaderBar>
+    <Main id="accueil" sidebar={sidebar}>
       <Container>
         <LogoPema src={logo} alt="logo pema consulting" />
         <Title>Un voyage inédit au coeur de votre entreprise</Title>
