@@ -12,11 +12,11 @@ import { myChapters } from "../../assets/chapters";
 
 function Chapters() {
   return (
-    <SectionContainer>
+    <SectionContainer id="chapters">
       <Section>
         {myChapters.map((content, i) => (
           <div key={content.modalItem}>
-            <Title>{content.title}</Title>
+            <Title id={content.idToLink}>{content.title}</Title>
             {content.paragraph.map((textContent) => (
               <div key={textContent.id}>
                 <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
