@@ -7,7 +7,7 @@ import {
   Title,
 } from "../../styled-components/Chapters";
 import Clients from "./Clients";
-import Timeline from "./TimelineChapter";
+import TimelineChapter from "./TimelineChapter";
 import { myChapters } from "../../assets/chapters";
 
 function Chapters() {
@@ -28,14 +28,14 @@ function Chapters() {
                     />
                   </SchemaContainer>
                 )}
-                {i === 2 && (
-                  <>
-                    <Title> Qu’aurions-nous de différent ?</Title>
-                    <Timeline />
-                  </>
-                )}
               </div>
             ))}
+            {i === 1 && (
+              <>
+                <Title> Qu’aurions-nous de différent ?</Title>
+                <TimelineChapter />
+              </>
+            )}
           </div>
         ))}
         <Clients />
