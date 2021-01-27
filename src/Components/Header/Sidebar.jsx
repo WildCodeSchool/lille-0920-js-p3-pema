@@ -1,3 +1,4 @@
+import scrollToElement from "scroll-to-element";
 import {
   Main,
   IconBars,
@@ -5,6 +6,7 @@ import {
   Ul,
   Li,
   Item,
+  LinkStyled,
 } from "../../styled-components/Header/Sidebar";
 
 import { myItems } from "../../assets/sidebar";
@@ -12,6 +14,14 @@ import { myItems } from "../../assets/sidebar";
 const Sidebar = ({ sidebar, setSidebar }) => {
   const showSidebar = () => {
     setSidebar(!sidebar);
+  };
+
+  const scrollTo = (itemID) => {
+    scrollToElement(itemID, {
+      offset: 0,
+      ease: "out-circ",
+      duration: 600,
+    });
   };
 
   return (
@@ -27,9 +37,17 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         <Ul>
           {myItems.map((item) => {
             return (
-              <Li onClick={showSidebar} key={item.id}>
+              <Li
+                onClick={() => {
+                  showSidebar();
+                  scrollTo(item.href);
+                }}
+                key={item.id}
+              >
                 <i className={item.icon}></i>
-                <Item>{item.name}</Item>
+                <Item>
+                  <LinkStyled>{item.name}</LinkStyled>
+                </Item>
               </Li>
             );
           })}
