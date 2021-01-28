@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ParagraphOneSpacing = styled.p`
   line-height: 2em;
+  font-size: 15pt;
 `;
 
 export const Schema = styled.img`
@@ -45,10 +46,12 @@ export const SectionContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 1.5em;
+  font-size: 30pt;
+  text-align: center;
   font-weight: bold;
   line-height: 3em;
-  color: black;
+  color: #505c62;
+  letter-spacing: 3pt;
   margin: 5vh 0;
 
   &#subtitle {

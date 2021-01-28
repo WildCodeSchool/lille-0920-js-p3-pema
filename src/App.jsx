@@ -9,7 +9,7 @@ import HeaderBar from "./Components/Header/HeaderBar";
 
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Reset />
       <HeaderBar />
       <Header />
@@ -18,6 +18,6 @@ export default function App() {
       <Testimonies />
       <Partners />
       <Footer />
-    </>
+    </div>
   );
 }
