@@ -8,11 +8,11 @@ export const CategoryName = styled.h1`
   color: black;
 `;
 
-export const ClientsContainer = styled.div`
+export const MainContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   height: auto;
-  width: 95vw;
+  width: auto;
   margin: 2vh;
 `;
 
@@ -22,8 +22,6 @@ export const DisplayLogo = styled.div`
   justify-content: center;
   height: 30vh;
   width: 20vw;
-  border: 2px solid black;
-  box-shadow: 4px 4px 10px grey;
   margin: 1vw;
 `;
 
@@ -32,4 +30,10 @@ export const Logo = styled.img`
     (id >= 1 && id < 4 && "14vw") || (id > 3 && id < 7 && "10vw")};
   height: auto;
   margin: 2vw;
+`;
+
+export const LogosContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+  height: min-content;
 `;
