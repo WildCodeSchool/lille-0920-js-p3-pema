@@ -11,8 +11,6 @@ import {
   Title,
   Paragraph,
   Bloc,
-  LastContainer,
-  LastSentence,
 } from "../../styled-components/Timeline";
 import { myBlocs } from "../../assets/timelineChapter";
 
@@ -39,11 +37,6 @@ function Timeline() {
           ))}
         </BlocContainer>
       </TimelineContainer>
-      <LastContainer>
-        <LastSentence data-aos="zoom-out-down">
-          Nous leur offrons bien plus !
-        </LastSentence>
-      </LastContainer>
     </Main>
   );
 }

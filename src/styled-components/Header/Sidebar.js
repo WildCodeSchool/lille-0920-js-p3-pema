@@ -96,3 +96,8 @@ export const Item = styled.span`
   font-family: GT Walsheim;
   margin-left: 5%;
 `;
+
+export const LinkStyled = styled.a`
+  text-decoration: none;
+  color: white;
+`;

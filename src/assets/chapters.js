@@ -5,6 +5,7 @@ export const myChapters = [
   {
     modalItem: 1,
     title: "Inspiration",
+    idToLink: "chapitre1",
     paragraph: [
       {
         id: 1,
@@ -50,6 +51,7 @@ export const myChapters = [
     modalItem: 2,
     title: "Carnet de voyage",
     subtitle: "Que dire ?",
+    idToLink: "chapitre2",
     paragraph: [
       {
         id: 1,
@@ -97,6 +99,7 @@ export const myChapters = [
   {
     modalItem: 3,
     title: "Souvenir du voyage",
+    idToLink: "chapitre3",
     paragraph: [
       {
         id: 1,

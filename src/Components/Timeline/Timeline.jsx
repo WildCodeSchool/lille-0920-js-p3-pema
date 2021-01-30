@@ -22,7 +22,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <Main>
+    <Main id="timeline">
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>

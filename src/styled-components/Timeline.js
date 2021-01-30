@@ -30,7 +30,7 @@ export const Line = styled.div`
   width: 2.5px;
   position: relative;
   margin-left: 50%;
-  margin-top: 10%;
+  margin-bottom: 20%;
   @media screen and (max-width: 700px) {
     margin-left: 3%;
   }
@@ -97,8 +97,7 @@ export const Paragraph = styled.p`
 export const LastContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 5%;
-  margin-bottom: 5%;
+  padding: 2%;
 `;
 
 export const LastSentence = styled.span`

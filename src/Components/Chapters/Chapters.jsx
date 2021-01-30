@@ -7,16 +7,16 @@ import {
   Title,
 } from "../../styled-components/Chapters";
 import Clients from "./Clients";
-import Timeline from "./TimelineChapter";
+import TimelineChapter from "./TimelineChapter";
 import { myChapters } from "../../assets/chapters";
 
 function Chapters() {
   return (
-    <SectionContainer>
+    <SectionContainer id="chapters">
       <Section>
         {myChapters.map((content, i) => (
           <div key={content.modalItem}>
-            <Title>{content.title}</Title>
+            <Title id={content.idToLink}>{content.title}</Title>
             {content.paragraph.map((textContent) => (
               <div key={textContent.id}>
                 <ParagraphOneSpacing>{textContent.text}</ParagraphOneSpacing>
@@ -28,14 +28,14 @@ function Chapters() {
                     />
                   </SchemaContainer>
                 )}
-                {i === 2 && (
-                  <>
-                    <Title> Qu’aurions-nous de différent ?</Title>
-                    <Timeline />
-                  </>
-                )}
               </div>
             ))}
+            {i === 1 && (
+              <>
+                <Title> Qu’aurions-nous de différent ?</Title>
+                <TimelineChapter />
+              </>
+            )}
           </div>
         ))}
         <Clients />
