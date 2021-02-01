@@ -20,7 +20,7 @@ export const Title = styled.h2`
 
 export const Container = styled.div`
   width: 70%;
-  margin-left: 15%;
+  margin-left: 16%;
 `;
 
 export const Name = styled.span`

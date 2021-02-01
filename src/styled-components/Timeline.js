@@ -30,7 +30,7 @@ export const Line = styled.div`
   width: 2.5px;
   position: relative;
   margin-left: 50%;
-  margin-bottom: 20%;
+  margin-top: 10%;
   @media screen and (max-width: 700px) {
     margin-left: 3%;
   }
@@ -58,7 +58,7 @@ export const BlocItems = styled.div`
   position: relative;
   width: 80%;
   height: 10vh;
-  left: ${({ id }) => (id === 1 || id === 3) && `-100%`};
+  left: ${({ id }) => id % 2 !== 0 && `-100%`};
   padding-top: 10%;
   padding-bottom: 3%;
   @media screen and (max-width: 1100px) {
@@ -97,7 +97,8 @@ export const Paragraph = styled.p`
 export const LastContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2%;
+  padding: 5%;
+  margin-bottom: 5%;
 `;
 
 export const LastSentence = styled.span`

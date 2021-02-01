@@ -66,7 +66,7 @@ export const HeaderBarStyled = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 7%;
+  width: 12%;
   padding-left: 1%;
   cursor: pointer;
   @media screen and (max-width: 1100px) {
