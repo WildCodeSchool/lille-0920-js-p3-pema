@@ -1,6 +1,3 @@
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
-
 import { myPartners } from "../../assets/partners";
 import {
   Main,
@@ -17,7 +14,6 @@ const Partners = () => {
   return (
     <Main className="slide-container">
       <Title>Nos partenaires et nos clients</Title>
-      <Slide autoplay>
         {myPartners.map((partner) => {
           return (
             <Blocs key={partner.id} id={partner.id}>
@@ -37,7 +33,6 @@ const Partners = () => {
             </Blocs>
           );
         })}
-      </Slide>
     </Main>
   );
 };
