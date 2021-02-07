@@ -7,8 +7,7 @@ export const Main = styled.div`
   margin-top: 2%;
   color: white;
   background-color: #001e3b;
-  height: 25vh;
-  padding-bottom: 2%;
+  padding: 2%;
 `;
 
 export const FirstContainer = styled.div`
@@ -19,27 +18,34 @@ export const FirstContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 18%;
-  padding-left: 1%;
+  width: 13%;
   cursor: pointer;
   @media screen and (max-width: 1100px) {
     width: 10%;
   }
   @media screen and (max-width: 500px) {
-    width: 17%;
-    margin-left: 2vw;
+    width: 26%;
   }
 `;
 
 export const Phone = styled.span`
-  font-size: 18pt;
+  font-size: 15pt;
   font-weight: bold;
+  @media screen and (max-width: 500px) {
+    font-size: 8pt;
+  }
+`;
+
+export const SecondContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const Droit = styled.div`
-  color: #fff;
-  margin-left: 40px;
-  font-weight: bolder;
-  margin-top: 10px;
+  width: 60%;
   text-align: center;
+  font-weight: bold;
+  @media screen and (max-width: 500px) {
+    font-size: 7pt;
+  }
 `;

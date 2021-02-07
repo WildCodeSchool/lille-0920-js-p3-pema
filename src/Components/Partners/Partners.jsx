@@ -9,7 +9,7 @@ const Partners = () => {
   return (
     <>
       <Title>Nos partenaires </Title>
-      <Blocs>
+      <Blocs id="partners">
         {myPartners.map(partner => {
           return (
             <Logo

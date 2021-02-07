@@ -20,14 +20,13 @@ to{
 `;
 
 export const MainContainer = styled.div`
-  //border: 1px solid yellow;
   &.absolute {
     position: absolute;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 7vh;
+    //height: 7vh;
     width: 100%;
     color: white;
     animation: ${headerDisappear} 0.25s ease-in;
@@ -39,13 +38,11 @@ export const MainContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
     width: 100%;
     background-image: url(${imageHeader});
     animation: ${headerAppear} 0.25s ease-in;
   }
   @media screen and (max-width: 500px) {
-    height: 7vh;
     padding-top: 2%;
   }
 `;

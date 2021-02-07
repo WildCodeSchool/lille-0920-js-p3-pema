@@ -11,10 +11,10 @@ import {
 } from "../../styled-components/Testimonies";
 const Testimonies = () => {
   return (
-    <Main className="slide-container">
+    <Main id="testimonies" className="slide-container">
       <Title>Quelques témoignages .. </Title>
       <Slide autoplay>
-        {myTestimonies.map((testimony) => {
+        {myTestimonies.map(testimony => {
           return (
             <Container key={testimony.id}>
               <Text>{testimony.text}</Text>

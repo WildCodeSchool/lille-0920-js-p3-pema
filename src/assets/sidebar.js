@@ -7,20 +7,20 @@ export const myItems = [
   },
   {
     id: 1,
-    name: "Inspiration",
+    name: "Chapitres",
     icon: "fas fa-plane",
-    href: "#chapitre1",
+    href: "#chapters",
   },
   {
     id: 2,
-    name: "Carnet de voyage",
-    icon: "fas fa-handshake-alt",
-    href: "#chapitre2",
+    name: "Témoignages",
+    icon: "fas fa-quote-right",
+    href: "#testimonies",
   },
   {
     id: 3,
-    name: "Nos clients",
+    name: "Partenaires",
     icon: "fas fa-handshake-alt",
-    href: "#chapitre3",
+    href: "#partners",
   },
 ];
