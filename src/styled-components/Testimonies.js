@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  padding: 2% 0;
+  padding: 2%;
   margin-bottom: 5%;
   text-align: center;
   color: white;
