@@ -17,7 +17,6 @@ export default function App() {
       <Chapters />
       <Testimonies />
       <Partners />
-      <Footer />
     </div>
   );
 }

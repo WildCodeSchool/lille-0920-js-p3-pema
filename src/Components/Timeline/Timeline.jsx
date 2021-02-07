@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -31,13 +32,11 @@ const Timeline = () => {
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>
-          {textBloc.map(bloc => (
-            <Bloc key={bloc.id}>
-              <BlocItems key={bloc.id} id={bloc.id}>
-                <Title data-aos="zoom-out-down" id={bloc.id}>
-                  {bloc.title}
-                </Title>
-                <Paragraph data-aos="zoom-out-down">{bloc.paragraph}</Paragraph>
+          {textBloc.map((bloc, i) => (
+            <Bloc key={i}>
+              <BlocItems data-aos="zoom-out-down" key={bloc.id} id={i}>
+                <Title id={bloc.id}>{bloc.title}</Title>
+                <Paragraph>{bloc.paragraph}</Paragraph>
               </BlocItems>
               <Line></Line>
             </Bloc>

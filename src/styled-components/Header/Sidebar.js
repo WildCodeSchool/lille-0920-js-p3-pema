@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  padding: 1%;
+  padding: 2%;
 `;
 
 export const IconBars = styled.div`
@@ -39,7 +39,7 @@ export const Nav = styled.nav`
     `}
   @media screen and (max-width: 1100px) {
     width: 50%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 30, 59);
     ${({ sidebar }) =>
       sidebar &&
       `
@@ -93,7 +93,6 @@ export const Li = styled.li`
 `;
 
 export const Item = styled.span`
-  font-family: GT Walsheim;
   margin-left: 5%;
 `;
 

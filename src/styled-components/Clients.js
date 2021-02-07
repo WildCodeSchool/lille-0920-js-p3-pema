@@ -1,39 +1,34 @@
 import styled from "styled-components";
 
-export const CategoryName = styled.h1`
-  font-size: 1.5em;
-  font-weight: 500;
-  margin: 4vh;
-  padding-left: 1vw;
-  color: black;
-`;
-
 export const MainContainer = styled.div`
   display: flex;
+  justify-content: space-around;
+  align-items: space-around;
   flex-wrap: wrap;
-  height: auto;
+  margin: 2%;
   width: auto;
-  margin: 2vh;
 `;
 
 export const DisplayLogo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 30vh;
-  width: 20vw;
-  margin: 1vw;
+  justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    margin: 2%;
+  }
 `;
 
 export const Logo = styled.img`
-  width: ${({ id }) =>
-    (id >= 1 && id < 4 && "14vw") || (id > 3 && id < 7 && "10vw")};
-  height: auto;
-  margin: 2vw;
+  width: 10em;
+  margin: 2em;
+  @media screen and (max-width: 500px) {
+    width: 5em;
+    margin: 1%;
+  }
 `;
 
 export const LogosContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   height: min-content;
 `;

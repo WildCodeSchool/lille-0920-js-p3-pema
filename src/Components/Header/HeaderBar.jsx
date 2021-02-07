@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import {
+  MainContainer,
   Logo,
   TagLine,
   LogoAndTagLine,
-  HeaderBarStyled,
-} from "../../styled-components/Header/Header";
+} from "../../styled-components/Header/HeaderBar";
 import logo from "../../assets/images/logo.png";
 import Sidebar from "./Sidebar";
 
-export default function HeaderBar() {
+const HeaderBar = () => {
   const [isHeaderSticky, setHeaderSticky] = useState(false);
   const [sidebar, setSidebar] = useState(false);
 
@@ -26,12 +26,14 @@ export default function HeaderBar() {
   }, [setHeaderSticky]);
 
   return (
-    <HeaderBarStyled className={isHeaderSticky ? "sticky" : "absolute"}>
+    <MainContainer className={isHeaderSticky ? "sticky" : "absolute"}>
       <LogoAndTagLine>
         <Logo src={logo} alt="logo pema consulting" />
         <TagLine>Un voyage inédit au coeur de votre entreprise</TagLine>
       </LogoAndTagLine>
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
-    </HeaderBarStyled>
+    </MainContainer>
   );
-}
+};
+
+export default HeaderBar;

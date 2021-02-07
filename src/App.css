@@ -3,8 +3,6 @@
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 500px) {
-  .react-slideshow-container .default-nav {
-    display: none;
-  }
+.react-slideshow-container .default-nav {
+  display: none;
 }
