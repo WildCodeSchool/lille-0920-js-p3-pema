@@ -1,6 +1,3 @@
-import "react-slideshow-image/dist/styles.css";
-
-import { myPartners } from "../../assets/partners";
 import { Title, Blocs, Logo } from "../../styled-components/Partners";
 
 import "../../App.css";

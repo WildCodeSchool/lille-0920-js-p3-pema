@@ -15,7 +15,6 @@ const Testimonies = () => {
 
   useEffect(() => {
     api.get("/admin/testimonies").then(({ data }) => {
-      console.log(data);
       setTextBloc(data);
     });
   }, []);
@@ -24,7 +23,7 @@ const Testimonies = () => {
     <Main id="testimonies" className="slide-container">
       <Title>Quelques témoignages .. </Title>
       <Slide autoplay>
-        {textBloc.map((testimony) => {
+        {textBloc.map(testimony => {
           return (
             <Container key={testimony.id}>
               <Text>{testimony.text}</Text>

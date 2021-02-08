@@ -26,7 +26,6 @@ export const MainContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //height: 7vh;
     width: 100%;
     color: white;
     animation: ${headerDisappear} 0.25s ease-in;

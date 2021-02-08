@@ -21,7 +21,6 @@ function Chapters() {
   useEffect(() => {
     api.get("/admin/chapters").then(({ data }) => {
       setMyChapters(data);
-      console.log(data);
     });
   }, []);
 

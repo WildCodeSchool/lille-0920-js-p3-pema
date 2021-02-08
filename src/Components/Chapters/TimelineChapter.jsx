@@ -14,7 +14,6 @@ import {
   Paragraph,
   Bloc,
 } from "../../styled-components/Timeline";
-import { myBlocs } from "../../assets/timelineChapter";
 
 function Timeline() {
   const [textBloc, setTextBloc] = useState([]);
@@ -31,7 +30,7 @@ function Timeline() {
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>
-          {textBloc.map((bloc) => (
+          {textBloc.map(bloc => (
             <Bloc key={bloc.id}>
               <BlocItems key={bloc.id} id={bloc.id}>
                 <Title data-aos="zoom-out-down" id={bloc.id}>

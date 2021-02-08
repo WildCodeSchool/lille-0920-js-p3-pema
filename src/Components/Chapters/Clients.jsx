@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import { api } from "../../conf";
-import { myClients } from "../../assets/clients";
 import {
   Logo,
   DisplayLogo,
@@ -14,8 +13,6 @@ export default function Clients() {
   useEffect(() => {
     api.get("/admin/clients").then(({ data }) => {
       setMyClients(data);
-      console.log(data[0].url);
-      console.log(myClients);
     });
   }, []);
 
