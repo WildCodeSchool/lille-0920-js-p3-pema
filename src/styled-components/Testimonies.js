@@ -1,36 +1,36 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+  padding: 2%;
+  margin-bottom: 5%;
   text-align: center;
-  width: 100%;
-  margin-bottom: 10%;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  color: white;
+  background-color: #001e3b;
+  box-shadow: 0px 0px 2px #001e3b;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   font-size: 30pt;
-  margin: 2%;
-  font-weight: lighter;
-  color: #001027;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3pt;
+  margin: 2% 0;
   @media screen and (max-width: 500px) {
-    font-size: 18pt;
+    font-size: 15pt;
+    height: auto;
   }
 `;
 
 export const Container = styled.div`
-  width: 70%;
-  margin-left: 16%;
+  margin-top: 2%;
 `;
 
 export const Name = styled.span`
   font-size: 18pt;
-  margin-bottom: 2%;
   font-weight: bold;
-  color: #505c62;
-  visibility: ${({ id }) => id === 0 && "hidden"};
   @media screen and (max-width: 500px) {
-    font-size: 10pt;
+    font-size: 12pt;
+    line-height: 2;
   }
 `;
 
@@ -39,4 +39,7 @@ export const Text = styled.p`
   font-style: italic;
   line-height: 1.4;
   margin-bottom: 5%;
+  @media screen and (max-width: 500px) {
+    font-size: 12pt;
+  }
 `;

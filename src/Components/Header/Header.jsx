@@ -7,7 +7,7 @@ import {
 } from "../../styled-components/Header/Header";
 import logo from "../../assets/images/logo.png";
 
-const Header = ({ sidebar, setSidebar }) => {
+const Header = ({ sidebar }) => {
   return (
     <Main id="accueil" sidebar={sidebar}>
       <Container>

@@ -1,60 +1,50 @@
 import styled from "styled-components";
 
-export const ParagraphOneSpacing = styled.p`
+export const SectionContainer = styled.div`
+  //border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  //padding: 0 5%;
+  text-align: center;
+`;
+
+export const Paragraph = styled.p`
+  //border: 1px solid red;
   line-height: 2em;
   font-size: 15pt;
+  padding: 0 5%;
+  @media screen and (max-width: 500px) {
+    font-size: 12pt;
+  }
 `;
 
 export const Schema = styled.img`
-  margin: 4vh;
-`;
-
-export const SchemaContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const Section = styled.div`
-  &.visible {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    height: max-content;
-    width: 65vw;
-    padding: 2vw;
-    margin: 2vh;
-    line-height: 2em;
+  margin: 3%;
+  width: 50%;
+  @media screen and (max-width: 1500px) {
+    width: 90%;
   }
-  &.hidden {
-    display: none;
-  }
-  &#hideShortcut {
-    translate: -8vw;
-    transition: all 0.5s ease-in;
-  }
-  &#showShortcut {
-    transition: all 0.5s ease-in;
-  }
-`;
-
-export const SectionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 95vw;
-  margin: 3vw;
 `;
 
 export const Title = styled.h1`
   font-size: 30pt;
   text-align: center;
   font-weight: bold;
-  line-height: 3em;
   color: #505c62;
   letter-spacing: 3pt;
-  margin: 5vh 0;
-
+  margin: 5% 0;
   &#subtitle {
     font-weight: unset;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 20pt;
+  }
+`;
+
+export const SchemaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
