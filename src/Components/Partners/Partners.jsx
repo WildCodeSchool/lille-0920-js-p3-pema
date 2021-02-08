@@ -1,16 +1,22 @@
+import { useEffect, useState } from "react";
 import "react-slideshow-image/dist/styles.css";
-
-import { myPartners } from "../../assets/partners";
-import { Title, Blocs, Logo } from "../../styled-components/Partners";
-
 import "../../App.css";
+import { api } from "../../conf";
+import { Blocs, Logo, Title } from "../../styled-components/Partners";
 
 const Partners = () => {
+  const [textBloc, setTextBloc] = useState([]);
+
+  useEffect(() => {
+    api.get("/admin/partners").then(({ data }) => {
+      setTextBloc(data);
+    });
+  }, []);
   return (
     <>
       <Title>Nos partenaires </Title>
       <Blocs id="partners">
-        {myPartners.map(partner => {
+        {textBloc.map((partner) => {
           return (
             <Logo
               key={partner.id}
