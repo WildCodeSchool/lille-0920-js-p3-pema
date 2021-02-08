@@ -31,10 +31,10 @@ const Timeline = () => {
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>
-          {textBloc.map(bloc => (
-            <Bloc key={bloc.id}>
-              <BlocItems key={bloc.id} id={bloc.id}>
-                <Title data-aos="zoom-out-down" id={bloc.id}>
+          {textBloc.map((bloc, i) => (
+            <Bloc key={i}>
+              <BlocItems key={bloc.id} id={i}>
+                <Title data-aos="zoom-out-down" id={i}>
                   {bloc.title}
                 </Title>
                 <Paragraph data-aos="zoom-out-down">{bloc.paragraph}</Paragraph>

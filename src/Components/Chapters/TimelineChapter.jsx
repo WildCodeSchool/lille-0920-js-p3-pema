@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
-
 import "aos/dist/aos.css";
+
+import { api } from "../../conf";
+
 import {
   Main,
   TimelineContainer,
@@ -15,22 +17,27 @@ import {
 import { myBlocs } from "../../assets/timelineChapter";
 
 function Timeline() {
+  const [textBloc, setTextBloc] = useState([]);
+
   useEffect(() => {
+    api.get("/admin/thirdchapters").then(({ data }) => {
+      setTextBloc(data);
+    });
     Aos.init({ duration: 2000 });
-  });
+  }, []);
 
   return (
     <Main>
       <TimelineContainer>
         <Line></Line>
         <BlocContainer>
-          {myBlocs.map((bloc) => (
+          {textBloc.map((bloc) => (
             <Bloc key={bloc.id}>
               <BlocItems key={bloc.id} id={bloc.id}>
                 <Title data-aos="zoom-out-down" id={bloc.id}>
                   {bloc.title}
                 </Title>
-                <Paragraph data-aos="zoom-out-down">{bloc.text}</Paragraph>
+                <Paragraph data-aos="zoom-out-down">{bloc.paragraph}</Paragraph>
               </BlocItems>
               <Line></Line>
             </Bloc>
