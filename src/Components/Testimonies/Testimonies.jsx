@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-import { myTestimonies } from "../../assets/testimonies";
 import { api } from "../../conf";
 import {
   Main,
