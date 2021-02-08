@@ -1,9 +1,8 @@
+import { useEffect, useState } from "react";
+import { api } from "../../conf";
 import { Title, Blocs, Logo } from "../../styled-components/Partners";
 
-import { useEffect, useState } from "react";
 import "../../App.css";
-import { api } from "../../conf";
-import { Blocs, Logo, Title } from "../../styled-components/Partners";
 
 const Partners = () => {
   const [textBloc, setTextBloc] = useState([]);
