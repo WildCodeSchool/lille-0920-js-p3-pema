@@ -26,6 +26,20 @@ cd lille-0920-js-p3-pema-backend
 npm install
 ```
 
+### Config the backend
+
+You need to create an `.env` file at the base of the project and assign the correct values for each variables
+
+```
+DB_HOST=
+DB_USER=
+DB_PASS=
+DB_SCHEMA=
+BACK_PORT=
+```
+
+And import each sql files in your database !
+
 ### To start the backend server
 
 ```
