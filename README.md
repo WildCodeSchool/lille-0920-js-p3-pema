@@ -1,6 +1,7 @@
 # PEMA Consulting
 
-Intro projet
+This project is a web application for a consultant who wants more visibility for his company.
+The client wanted also an admin page on which he can change the contents of his website.
 
 # Getting Started
 
