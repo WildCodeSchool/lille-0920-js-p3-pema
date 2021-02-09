@@ -3,6 +3,14 @@
 This project is a web application for a consultant who wants more visibility for his company.
 The client wanted also an admin page on which he can change the contents of his website.
 
+This project was made in 2 months.
+
+This project is split into several repositories.
+
+- The Frontend : [here](https://github.com/WildCodeSchool/lille-0920-js-p3-pema)
+- The Backend : [here](https://github.com/WildCodeSchool/lille-0920-js-p3-pema-backend)
+- The AdminPanel : [here](https://github.com/WildCodeSchool/lille-0920-js-p3-pema-admin)
+
 # Getting Started
 
 ## Technologies used
