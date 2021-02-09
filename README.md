@@ -4,6 +4,17 @@ Intro projet
 
 # Getting Started
 
+## Technologies used :
+
+### Front-End
+
+- React
+- Styled-component
+
+### Backend
+
+- NodeJS (with Express)
+
 ## Build :
 
 Before starting the project, you will need the backend :
