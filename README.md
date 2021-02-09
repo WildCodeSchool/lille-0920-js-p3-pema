@@ -62,6 +62,22 @@ npm start
 
 Open `localhost:3000` and enjoy !
 
+### How to install the Admin panel
+
+You will need the admin panel project to administrate your website !
+
+```
+git clone https://github.com/WildCodeSchool/lille-0920-js-p3-pema-admin.git
+cd lille-0920-js-p3-admin
+npm install
+```
+
+### To start the project
+
+```
+npm start
+```
+
 ## Contributors
 
 - [@Sarahshr](https://github.com/Sarahshr)
