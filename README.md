@@ -14,6 +14,7 @@ Intro projet
 ### Backend
 
 - NodeJS (with Express)
+- MySQL
 
 ## Build :
 
@@ -23,7 +24,6 @@ Before starting the project, you will need the backend :
 git clone https://github.com/WildCodeSchool/lille-0920-js-p3-pema-backend.git
 cd lille-0920-js-p3-pema-backend
 npm install
-
 ```
 
 ### To start the backend server :
