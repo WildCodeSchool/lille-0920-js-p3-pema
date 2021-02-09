@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.div`
-  //border: 1px solid blue;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  //padding: 0 5%;
   text-align: center;
 `;
 
 export const Paragraph = styled.p`
-  //border: 1px solid red;
   line-height: 2em;
   font-size: 15pt;
   padding: 0 5%;
