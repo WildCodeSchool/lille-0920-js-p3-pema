@@ -8,7 +8,7 @@ const Partners = () => {
   const [textBloc, setTextBloc] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/partners").then(({ data }) => {
+    api.get("/partners").then(({ data }) => {
       setTextBloc(data);
     });
   }, []);

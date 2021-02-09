@@ -11,7 +11,7 @@ export default function Clients() {
   const [myClients, setMyClients] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/clients").then(({ data }) => {
+    api.get("/clients").then(({ data }) => {
       setMyClients(data);
     });
   }, []);

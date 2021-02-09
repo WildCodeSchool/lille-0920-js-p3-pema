@@ -21,7 +21,7 @@ const Timeline = () => {
   const [textBloc, setTextBloc] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/timeline").then(({ data }) => {
+    api.get("/timeline").then(({ data }) => {
       setTextBloc(data);
     });
     Aos.init({ duration: 2000 });
