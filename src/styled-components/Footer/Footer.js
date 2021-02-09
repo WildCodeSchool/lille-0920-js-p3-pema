@@ -1,81 +1,51 @@
 import styled from "styled-components";
-import nuit from "../../assets/images/Footer/nuit.jpeg";
 
-export const Footer = styled.footer`
-  width: 100%;
-  background-image: url(${nuit});
-  font-family: GT Walsheim;
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2%;
   color: white;
-  height: 40vh;
-  margin-top: -153px;
+  background-color: #001e3b;
+  padding: 2%;
+`;
+
+export const FirstContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2%;
 `;
 
 export const Logo = styled.img`
-  width: 18%;
-  padding-left: 1%;
-  margin-top: -10px;
-
+  width: 13%;
   cursor: pointer;
   @media screen and (max-width: 1100px) {
     width: 10%;
   }
   @media screen and (max-width: 500px) {
-    width: 17%;
-    margin-left: 2vw;
+    width: 26%;
   }
 `;
 
-export const Container = styled.div`
-  padding: 20px 60px;
-  @media (max-width: 1000px) {
-    padding: 70px 30px;
-  }
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-`;
-
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 300px;
-`;
-
-export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px;
-  margin-top: -120px;
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-`;
-
-export const Link = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: bolder;
-  text-decoration: none;
-`;
-
-export const Title = styled.p`
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 40px;
+export const Phone = styled.span`
+  font-size: 15pt;
   font-weight: bold;
+  @media screen and (max-width: 500px) {
+    font-size: 8pt;
+  }
+`;
+
+export const SecondContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const Droit = styled.div`
-  color: #fff;
-  margin-left: 40px;
-  font-weight: bolder;
-  margin-top: 10px;
+  width: 60%;
   text-align: center;
+  font-weight: bold;
+  @media screen and (max-width: 500px) {
+    font-size: 7pt;
+  }
 `;

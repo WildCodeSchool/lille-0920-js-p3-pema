@@ -1,44 +1,33 @@
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
-
-import { myPartners } from "../../assets/partners";
-import {
-  Main,
-  Title,
-  Blocs,
-  CategoryTitle,
-  Logos,
-  Logo,
-} from "../../styled-components/Partners";
+import { useEffect, useState } from "react";
+import { api } from "../../conf";
+import { Title, Blocs, Logo } from "../../styled-components/Partners";
 
 import "../../App.css";
 
 const Partners = () => {
+  const [textBloc, setTextBloc] = useState([]);
+
+  useEffect(() => {
+    api.get("/admin/partners").then(({ data }) => {
+      setTextBloc(data);
+    });
+  }, []);
   return (
-    <Main className="slide-container">
-      <Title>Nos partenaires et nos clients</Title>
-      <Slide autoplay>
-        {myPartners.map((partner) => {
+    <>
+      <Title>Nos partenaires </Title>
+      <Blocs id="partners">
+        {textBloc.map(partner => {
           return (
-            <Blocs key={partner.id} id={partner.id}>
-              <CategoryTitle id={partner.id}>{partner.name}</CategoryTitle>
-              <Logos>
-                {partner.logos.map((logo) => {
-                  return (
-                    <Logo
-                      key={logo.alt}
-                      src={logo.src}
-                      alt={logo.alt}
-                      id={partner.id}
-                    />
-                  );
-                })}
-              </Logos>
-            </Blocs>
+            <Logo
+              key={partner.id}
+              src={partner.url}
+              alt={partner.name}
+              id={partner.id}
+            />
           );
         })}
-      </Slide>
-    </Main>
+      </Blocs>
+    </>
   );
 };
 export default Partners;

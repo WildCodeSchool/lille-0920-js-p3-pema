@@ -1,4 +1,6 @@
-import { myClients } from "../../assets/clients";
+import React, { useEffect, useState } from "react";
+
+import { api } from "../../conf";
 import {
   Logo,
   DisplayLogo,
@@ -6,15 +8,21 @@ import {
 } from "../../styled-components/Clients";
 
 export default function Clients() {
+  const [myClients, setMyClients] = useState([]);
+
+  useEffect(() => {
+    api.get("/admin/clients").then(({ data }) => {
+      setMyClients(data);
+    });
+  }, []);
+
   return (
     <MainContainer>
-      {myClients.map((client) =>
-        client.logos.map((logo) => (
-          <DisplayLogo key={logo.alt}>
-            <Logo src={logo.src} alt={logo.alt} id={client.id} />
-          </DisplayLogo>
-        ))
-      )}
+      {myClients.map(client => (
+        <DisplayLogo key={client.id}>
+          <Logo src={client.url} alt={client.name} id={client.id} />
+        </DisplayLogo>
+      ))}
     </MainContainer>
   );
 }

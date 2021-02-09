@@ -30,9 +30,10 @@ export const Line = styled.div`
   width: 2.5px;
   position: relative;
   margin-left: 50%;
-  margin-bottom: 20%;
+  margin-top: 10%;
   @media screen and (max-width: 700px) {
     margin-left: 3%;
+    width: 1px;
   }
 `;
 
@@ -52,23 +53,17 @@ export const BlocContainer = styled.div`
 export const BlocItems = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   color: black;
   text-align: center;
   position: relative;
   width: 80%;
   height: 10vh;
-  left: ${({ id }) => (id === 1 || id === 3) && `-100%`};
-  padding-top: 10%;
+  left: ${({ id }) => id % 2 !== 0 && `-100%`};
+  padding-top: ${({ id }) => (id === 3 ? `20%` : `5%`)};
   padding-bottom: 3%;
   @media screen and (max-width: 1100px) {
     height: auto;
-    ${({ id }) =>
-      id !== 1 &&
-      `
-      left: 0;
-      width: 80%;
-      `};
   }
   @media screen and (max-width: 700px) {
     left: -5%;
@@ -97,7 +92,8 @@ export const Paragraph = styled.p`
 export const LastContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2%;
+  padding: 5%;
+  margin-bottom: 5%;
 `;
 
 export const LastSentence = styled.span`
