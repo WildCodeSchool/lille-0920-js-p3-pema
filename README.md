@@ -4,7 +4,7 @@ Intro projet
 
 # Getting Started
 
-## Technologies used :
+## Technologies used
 
 ### Front-End
 
@@ -16,7 +16,7 @@ Intro projet
 - NodeJS (with Express)
 - MySQL
 
-## Build :
+## Build
 
 Before starting the project, you will need the backend :
 
@@ -26,13 +26,13 @@ cd lille-0920-js-p3-pema-backend
 npm install
 ```
 
-### To start the backend server :
+### To start the backend server
 
 ```
 node server.js
 ```
 
-### How to install the frontend locally :
+### How to install the frontend locally
 
 ```
 git clone https://github.com/WildCodeSchool/lille-0920-js-p3-pema.git
@@ -40,7 +40,7 @@ cd lille-0920-js-p3-pema
 npm install
 ```
 
-### To start the project :
+### To start the project
 
 ```
 npm start
@@ -48,7 +48,7 @@ npm start
 
 Open `localhost:3000` and enjoy !
 
-## Contributors :
+## Contributors
 
 - [@Sarahshr](https://github.com/Sarahshr)
 - [@AlexisCatrix](https://github.com/AlexisCatrix)
