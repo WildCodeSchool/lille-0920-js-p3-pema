@@ -14,7 +14,7 @@ const Testimonies = () => {
   const [textBloc, setTextBloc] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/testimonies").then(({ data }) => {
+    api.get("/testimonies").then(({ data }) => {
       setTextBloc(data);
     });
   }, []);

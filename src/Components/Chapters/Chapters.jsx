@@ -19,7 +19,7 @@ function Chapters() {
   const [myChapters, setMyChapters] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/chapters").then(({ data }) => {
+    api.get("/chapters").then(({ data }) => {
       setMyChapters(data);
     });
   }, []);

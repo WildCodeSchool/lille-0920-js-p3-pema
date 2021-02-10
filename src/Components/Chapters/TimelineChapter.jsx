@@ -19,7 +19,7 @@ function Timeline() {
   const [textBloc, setTextBloc] = useState([]);
 
   useEffect(() => {
-    api.get("/admin/thirdchapters").then(({ data }) => {
+    api.get("/thirdchapters").then(({ data }) => {
       setTextBloc(data);
     });
     Aos.init({ duration: 2000 });
